@@ -1,0 +1,136 @@
+1. 
+Write a query against the Sales.SalesOrderHeader table that returns orders placed in April 2008.
+Desired output:
+SalesOrderID OrderDate               CustomerID  SalesPersonID
+------------ ----------------------- ----------- -------------
+1. Incorrect - it returns correct result set in this particular case. But technically OrderDate column can store not only date but date/time values. Let’s say if there is an order with OrderDate = 2008-04-30 12:34:56 this row will be missed in your query.
+------------------------------------------------------------------------------------------------------------------------------------------------------
+--CORRECTED--
+
+SELECT SalesOrderID,OrderDate,CustomerID,SalesPersonID 
+FROM Sales.SalesOrderHeader 
+WHERE Year(OrderDate)=2008 AND Month(OrderDate)=4
+------------------------------------------------------------------------------------------------------------------------------------------------------
+2.
+Write a query against the Sales.SalesOrderHeader table that returns orders placed in 2005 on the last day of the month.
+Output:
+SalesOrderID OrderDate               CustomerID  SalesPersonID
+------------ ----------------------- ----------- -------------
+2. Correct - it returns logically correct result set. But the query itself is quite complicated, can you rewrite it in a more compact way?
+------------------------------------------------------------------------------------------------------------------------------------------------------
+--CORRECTED--
+
+SELECT SalesOrderID,OrderDate,CustomerID,SalesPersonID 
+FROM Sales.SalesOrderHeader 
+WHERE Year(OrderDate)=2005 AND OrderDate = EOMONTH(OrderDate)
+------------------------------------------------------------------------------------------------------------------------------------------------------
+3.
+Return persons from Person.Person table with last name containing the letter 't' thrice or more.
+Output:
+BusinessEntityID FirstName                         MiddleName                                LastName
+---------------- --------------------------------- ----------------------------------------- -------------------------------
+3. Incorrect - not all the columns are needed.
+------------------------------------------------------------------------------------------------------------------------------------------------------
+--CORRECTED--
+
+SELECT BusinessEntityID,FirstName,MiddleName,LastName
+FROM Person.Person
+WHERE LastName LIKE '%t%t%t%'
+------------------------------------------------------------------------------------------------------------------------------------------------------
+4.
+Return orders from Sales.SalesOrderDetail with total discount greater than 10, sorted by total discount.
+Output:
+SalesOrderID TotalDiscount
+------------ --------------------
+4. Incorrect - UnitPriceDiscount is not a discount value but a discount percentage. Please have a look at the LineTotal column description (in the Extended Properties) to build a correct formula for TotalDiscount.
+------------------------------------------------------------------------------------------------------------------------------------------------------
+--CORRECTED--
+
+SELECT SalesOrderID,SUM(OrderDiscount) as TotalDiscount--,COUNT(*) as rCount
+FROM (
+	SELECT SalesOrderID,(UnitPrice * UnitPriceDiscount * OrderQty) as OrderDiscount 
+	FROM Sales.SalesOrderDetail
+) as T
+GROUP BY SalesOrderID
+HAVING SUM(OrderDiscount)>10
+ORDER BY TotalDiscount 
+------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------
+6.
+Write a query against the Sales.SalesOrderHeader table that calculates row numbers for orders based on order
+date ordering (using order ID as the tiebreaker) for each customer separately.
+Output:
+CustomerID  OrderDate               SalesOrderID rownum
+----------- ----------------------- ------------ --------------------
+6. Incorrect - based on the assignment, every customer should have its own numeration, OrderDate column should be the main column for sorting.
+------------------------------------------------------------------------------------------------------------------------------------------------------
+--CORRECTED--
+But i don't sure if it's right. I need explanation for it query.
+
+SELECT CustomerID,OrderDate,SalesOrderID,
+ROW_NUMBER() OVER(PARTITION BY CustomerID ORDER BY OrderDate ASC) AS [rownum]
+FROM Sales.SalesOrderHeader
+--WHERE CustomerID=11003 
+ORDER BY OrderDate ASC
+------------------------------------------------------------------------------------------------------------------------------------------------------
+8.
+Return for each Vendor in Purchasing.Vendor vendor name and PurchasingWebServiceURL, sorted by PurchasingWebServiceURL, having NULL values sorted last.
+Output:
+BusinessEntityID Name                                               PurchasingWebServiceURL
+---------------- -------------------------------------------------- -----------------------------------------------------------------------
+8. Incorrect - the rows should be sorted by PurchasingWebServiceURL in ascending order
+------------------------------------------------------------------------------------------------------------------------------------------------------
+--CORRECTED--
+
+SELECT BusinessEntityID,Name,PurchasingWebServiceURL 
+FROM [Purchasing].[Vendor]
+ORDER BY (CASE WHEN PurchasingWebServiceURL IS NULL THEN 1 ELSE 0 END), PurchasingWebServiceURL ASC
+------------------------------------------------------------------------------------------------------------------------------------------------------
+9.
+Use table Sales.SalesOrderHeader. For each week return the number of orders.
+Output:
+week_start              week_end                numorders
+----------------------- ----------------------- -----------
+2005-06-27 00:00:00.000 2005-07-03 00:00:00.000 52
+2005-07-04 00:00:00.000 2005-07-10 00:00:00.000 26
+.....
+9. Incorrect - the query will work properly only for specific server settings (DATEFIRST property). Please rewrite the query so we can run it on any environment.
+------------------------------------------------------------------------------------------------------------------------------------------------------
+--CORRECTED--
+
+SELECT week_start,week_end,COUNT(*) as numorders--, DATENAME(dw,week_end) as Name_Of_week_end
+FROM (
+	SELECT week_start,DATEADD(second,-1,DATEADD(day,7,week_start)) as week_end 
+	FROM (
+		SELECT OrderDate, 
+		week_start=CONVERT(datetime,CONVERT(date,DATEADD(day,
+			CASE DATENAME(dw,OrderDate)
+				WHEN 'Monday'     THEN  0
+				WHEN 'Tuesday'    THEN -1
+				WHEN 'Wednesday'  THEN -2
+				WHEN 'Thursday'   THEN -3
+				WHEN 'Friday'     THEN -4
+				WHEN 'Saturday'   THEN -5
+				ELSE -6
+			END,OrderDate)))
+		FROM Sales.SalesOrderHeader --31'465
+	) as T --31'465
+	WHERE week_start>='2005-06-27' 
+) as T
+--WHERE week_start>='2005-06-27' AND week_end<'2005-07-04' --52
+--WHERE week_start>='2005-07-04' AND week_end<'2005-07-11' --26
+GROUP BY week_start,week_end
+------------------------------------------------------------------------------------------------------------------------------------------------------
+10.
+Select orders placed on weekends.
+Output:
+SalesOrderID OrderDate               Day Of Week
+------------ ----------------------- ------------------------------
+10. Incorrect - the query will work properly only for specific server settings (DATEFIRST property). Please rewrite the query so we can run it on any environment.
+------------------------------------------------------------------------------------------------------------------------------------------------------
+--CORRECTED--
+
+SELECT SalesOrderID,OrderDate,[Day Of Week]=DATENAME(dw,OrderDate)
+FROM Sales.SalesOrderHeader
+WHERE DATENAME(dw,OrderDate) IN ('Saturday','Sunday')
+------------------------------------------------------------------------------------------------------------------------------------------------------
