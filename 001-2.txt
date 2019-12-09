@@ -1,0 +1,76 @@
+/*
+1. 
+Write a query against the Sales.SalesOrderHeader table that returns orders placed in April 2008.
+Desired output:
+SalesOrderID OrderDate               CustomerID  SalesPersonID
+*/
+--CORRECTED--
+
+SELECT SalesOrderID,OrderDate,CustomerID,SalesPersonID 
+FROM Sales.SalesOrderHeader 
+WHERE OrderDate >= '20080401' AND OrderDate < '20080501'
+------------------------------------------------------------------------------------------------------------------------------------------------------
+/*6.
+Write a query against the Sales.SalesOrderHeader table that calculates row numbers for orders based on order
+date ordering (using order ID as the tiebreaker) for each customer separately.
+Output:
+CustomerID  OrderDate               SalesOrderID rownum
+*/
+--CORRECTED--
+
+SELECT CustomerID,OrderDate,SalesOrderID,
+ROW_NUMBER() OVER(PARTITION BY CustomerID ORDER BY OrderDate ASC,SalesOrderID ASC) AS [rownum]
+FROM Sales.SalesOrderHeader
+ORDER BY OrderDate ASC
+------------------------------------------------------------------------------------------------------------------------------------------------------
+/*9.
+Use table Sales.SalesOrderHeader. For each week return the number of orders.
+Output:
+week_start              week_end                numorders
+----------------------- ----------------------- -----------
+2005-06-27 00:00:00.000 2005-07-03 00:00:00.000 52
+2005-07-04 00:00:00.000 2005-07-10 00:00:00.000 26
+*/
+--CORRECTED--
+
+--SET LANGUAGE english
+--SET LANGUAGE russian
+DECLARE @FirstDay int = @@DATEFIRST --Save DATEFIRST
+SET DATEFIRST 1
+SELECT week_start,week_end,COUNT(*) as numorders
+FROM (
+	SELECT week_start,DATEADD(day,6,week_start) as week_end 
+	FROM (
+		SELECT OrderDate, 
+		week_start=DATEADD(day,
+			DATEPART(dw,OrderDate) - (DATEPART(dw,OrderDate) + DATEPART(dw,OrderDate) - 1)
+		,OrderDate)
+		FROM Sales.SalesOrderHeader
+	) as T
+) as T
+--WHERE week_start>='2005-07-04' AND week_end<='2005-07-10' --26 --english
+--WHERE week_start>='04.07.2005' AND week_end<='10.07.2005' --26 --russian
+--WHERE week_start>='2005-06-27' AND week_end<='2005-07-03' --52 --english
+--WHERE week_start>='27.06.2005' AND week_end<='03.07.2005' --52 --russian
+GROUP BY week_start,week_end
+SET DATEFIRST @FirstDay --Restore DATEFIRST
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+/*10.
+Select orders placed on weekends.
+Output:
+SalesOrderID OrderDate               Day Of Week
+------------ ----------------------- ------------------------------
+10. Incorrect - the query will work properly only for specific server settings (DATEFIRST property). Please rewrite the query so we can run it on any environment.
+------------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+
+--SET LANGUAGE english
+--SET LANGUAGE russian
+DECLARE @FirstDay int = @@DATEFIRST --Save DATEFIRST
+SET DATEFIRST 1
+SELECT SalesOrderID,OrderDate--,[Day Of Week]=DATENAME(dw,OrderDate)
+FROM Sales.SalesOrderHeader
+WHERE DATEPART(dw,OrderDate) IN (6,7)
+SET DATEFIRST @FirstDay --Restore DATEFIRST
+------------------------------------------------------------------------------------------------------------------------------------------------------
