@@ -1,0 +1,141 @@
+/*1.
+Write a qury that would generate 3 copies for each Person row
+Output:
+BusinessEntityID FirstName                                          MiddleName                                         LastName
+---------------- -------------------------------------------------- -------------------------------------------------- --------------------------------------------------
+*/
+SELECT BusinessEntityID,FirstName,MiddleName,LastName FROM Person.Person
+UNION ALL
+SELECT BusinessEntityID,FirstName,MiddleName,LastName FROM Person.Person
+UNION ALL
+SELECT BusinessEntityID,FirstName,MiddleName,LastName FROM Person.Person
+ORDER BY BusinessEntityID
+--=====================================================================================================
+
+/*2.
+IF OBJECT_ID('dbo.Numbers') IS NOT NULL DROP TABLE dbo.Numbers
+CREATE TABLE dbo.Numbers(
+    n INT CONSTRAINT PK_Numbers PRIMARY KEY
+)
+Write a query that returns a row for each person living in Bellevue and day in the range 1 Jan 2014 - 7 Jan 2014
+Output:
+BusinessEntityID FirstName                                          LastName                                           City                           d
+---------------- -------------------------------------------------- -------------------------------------------------- ------------------------------ -----------------------
+255              Gordon                                             Hee                                                Bellevue                       2014-01-01 00:00:00.000
+255              Gordon                                             Hee                                                Bellevue                       2014-01-02 00:00:00.000
+255              Gordon                                             Hee                                                Bellevue                       2014-01-03 00:00:00.000
+255              Gordon                                             Hee                                                Bellevue                       2014-01-04 00:00:00.000
+255              Gordon                                             Hee                                                Bellevue                       2014-01-05 00:00:00.000
+255              Gordon                                             Hee                                                Bellevue                       2014-01-06 00:00:00.000
+255              Gordon                                             Hee                                                Bellevue                       2014-01-07 00:00:00.000
+.....*/
+IF OBJECT_ID('dbo.Numbers') IS NOT NULL DROP TABLE dbo.Numbers
+CREATE TABLE dbo.Numbers(n INT CONSTRAINT PK_Numbers PRIMARY KEY)
+INSERT dbo.Numbers (n) VALUES(0),(1),(2),(3),(4),(5),(6)
+SELECT PBAE.BusinessEntityID, PP.FirstName, PP.LastName, PA.City,d=DATEADD(day,N.n,'2014-01-01')
+FROM Person.BusinessEntityAddress PBAE
+JOIN Person.Person PP ON PP.BusinessEntityID  = PBAE.BusinessEntityID
+JOIN Person.Address PA ON PA.AddressID = PBAE.AddressID
+CROSS JOIN dbo.Numbers N
+WHERE PA.City='Bellevue' --AND PBAE.BusinessEntityID=255
+ORDER BY PBAE.BusinessEntityID, d
+
+/*3.
+Return customers and their orders, including customers who placed no orders.
+Output:
+CustomerID  LastName                                           FirstName                                          SalesOrderID OrderDate
+----------- -------------------------------------------------- -------------------------------------------------- ------------ -----------------------
+*/
+SELECT T1.CustomerID,T2.LastName,T2.FirstName,T3.SalesOrderID,T3.OrderDate
+FROM Sales.Customer T1 
+LEFT JOIN Person.Person T2 ON T2.BusinessEntityID = T1.PersonID
+LEFT JOIN Sales.SalesOrderHeader T3 ON T3.CustomerID = T1.CustomerID
+
+/*4.
+Select persons who do not have home address
+Output:
+BusinessEntityID LastName                                           FirstName
+---------------- -------------------------------------------------- --------------------------------------------------
+*/
+SELECT PP.BusinessEntityID,LastName,FirstName 
+FROM Person.Person PP
+LEFT JOIN Person.BusinessEntityAddress PB ON PB.BusinessEntityID = PP.BusinessEntityID
+LEFT JOIN Person.Address PA ON PA.AddressID = PB.AddressID 
+WHERE PA.AddressLine1 IS NULL
+
+/*5.
+Select Persons and their cell phones (Persons with no cell phones should also be returned).
+Output:
+BusinessEntityID LastName                                           PhoneNumber
+---------------- -------------------------------------------------- -------------------------
+*/
+SELECT P.BusinessEntityID,P.LastName,T.PhoneNumber
+FROM Person.Person P
+LEFT JOIN (
+  SELECT PP.BusinessEntityID,PP.PhoneNumber
+  FROM Person.PersonPhone PP 
+  INNER JOIN Person.PhoneNumberType PNT ON PNT.PhoneNumberTypeID = PP.PhoneNumberTypeID AND PNT.Name='Cell'
+) as T ON T.BusinessEntityID = P.BusinessEntityID
+
+
+/*6.
+Select customers with last name "Andersen" who placed orders in 2008, along with their orders. Also return those customers
+even if they didn’t place orders in 2008.
+Output:
+CustomerID  LastName                                           FirstName                                          SalesOrderID OrderDate
+----------- --------------------
+*/
+SELECT SC.CustomerID, PP.LastName,PP.FirstName,SSOH.SalesOrderID,SSOH.OrderDate
+FROM Sales.Customer SC
+JOIN Person.Person PP ON PP.BusinessEntityID = SC.PersonID
+JOIN Sales.SalesOrderHeader SSOH ON SSOH.CustomerID = SC.CustomerID
+WHERE PP.LastName='Andersen'
+
+
+/*7.
+Select all customers, and for each return a Yes/No value depending on whether the customer placed
+an order in 2007.
+Output:
+CustomerID  Has Orders in 2007
+----------- ------------------
+13346       Yes
+...
+*/
+SELECT T1.CustomerID, ISNULL(T2.Year2007,'N') as [Has Orders in 2007]
+FROM (
+  SELECT DISTINCT CustomerID FROM Sales.Customer 
+) as T1
+LEFT JOIN (
+  SELECT DISTINCT SC.CustomerID, 'Y' as Year2007
+  FROM Sales.Customer SC
+  JOIN Sales.SalesOrderHeader SSOH ON SSOH.CustomerID = SC.CustomerID
+  WHERE Year(SSOH.OrderDate) = 2007
+) as T2 ON T2.CustomerID = T1.CustomerID
+
+
+/*8.
+Select customers located in France and product names sold (customers who did not place orders should also be returned).
+Output:
+CustomerID  CustomerLastName                                   ProductName
+----------- -------------------------------------------------- --------------------------------------------------
+*/
+SELECT SC.CustomerID, PP.LastName,PP2.Name as ProductName
+FROM Sales.Customer SC
+JOIN Sales.SalesTerritory SST ON SST.TerritoryID = SC.TerritoryID AND SST.Name='France'
+JOIN Person.Person PP ON PP.BusinessEntityID = SC.PersonID
+LEFT JOIN Sales.SalesOrderHeader SSOH ON SSOH.CustomerID = SC.CustomerID 
+LEFT JOIN Sales.SalesOrderDetail SSOD ON SSOD.SalesOrderID = SSOH.SalesOrderID 
+LEFT JOIN Production.Product PP2 ON PP2.ProductID = SSOD.ProductID
+
+
+/*9.
+Select pairs of vendor and supplied product ordered by vendor name.
+Output:
+VendorName                                         ProductName
+-------------------------------------------------- --------------------------------------------------
+*/
+SELECT PV.Name as VendorName,PP.Name as ProductName
+FROM Purchasing.ProductVendor PPV
+JOIN Purchasing.Vendor PV ON PV.BusinessEntityID = PPV.BusinessEntityID
+JOIN Production.Product PP ON PP.ProductID = PPV.ProductID
+ORDER BY PV.Name
