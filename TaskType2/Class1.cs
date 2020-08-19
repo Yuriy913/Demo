@@ -47,10 +47,8 @@ namespace TaskType2
 
                 connStr = ttp.connectionString;
                 //if (ttp.ConsoleDebug)
-                //    connStr = "Password=sql_9time;Persist Security Info=True;User ID=yury;Initial Catalog=SupportDB;Data Source=147";
 
                 //if (ttp.ConsoleDebug)
-                //    connStr = "Password=trustnomore44;Persist security info=True;User ID=webclient;Initial Catalog=SupportDB;Data Source=SQL_DATA_SUPPORT";
 
                 sql = new Sql(connStr);
 
