@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="sqlTemplatesDataSet" targetNamespace="http://tempuri.org/sqlTemplatesDataSet.xsd" xmlns:mstns="http://tempuri.org/sqlTemplatesDataSet.xsd" xmlns="http://tempuri.org/sqlTemplatesDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="sqlTemplatesDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="sqlTemplatesDataSet" msprop:Generator_UserDSName="sqlTemplatesDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="sqlBlockTemplates" msprop:Generator_TableClassName="sqlBlockTemplatesDataTable" msprop:Generator_TableVarName="tablesqlBlockTemplates" msprop:Generator_TablePropName="sqlBlockTemplates" msprop:Generator_RowDeletingName="sqlBlockTemplatesRowDeleting" msprop:Generator_UserTableName="sqlBlockTemplates" msprop:Generator_RowChangingName="sqlBlockTemplatesRowChanging" msprop:Generator_RowEvHandlerName="sqlBlockTemplatesRowChangeEventHandler" msprop:Generator_RowDeletedName="sqlBlockTemplatesRowDeleted" msprop:Generator_RowEvArgName="sqlBlockTemplatesRowChangeEvent" msprop:Generator_RowChangedName="sqlBlockTemplatesRowChanged" msprop:Generator_RowClassName="sqlBlockTemplatesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" type="xs:string" minOccurs="0" />
+              <xs:element name="BlockTemplate" msprop:Generator_ColumnVarNameInTable="columnBlockTemplate" msprop:Generator_ColumnPropNameInRow="BlockTemplate" msprop:Generator_ColumnPropNameInTable="BlockTemplateColumn" msprop:Generator_UserColumnName="BlockTemplate" type="xs:string" minOccurs="0" />
+              <xs:element name="ParentID" msprop:Generator_ColumnVarNameInTable="columnParentID" msprop:Generator_ColumnPropNameInRow="ParentID" msprop:Generator_ColumnPropNameInTable="ParentIDColumn" msprop:Generator_UserColumnName="ParentID" type="xs:int" default="0" />
+              <xs:element name="SortOrder" msprop:Generator_ColumnVarNameInTable="columnSortOrder" msprop:Generator_ColumnPropNameInRow="SortOrder" msprop:Generator_ColumnPropNameInTable="SortOrderColumn" msprop:Generator_UserColumnName="SortOrder" type="xs:int" default="0" />
+              <xs:element name="Choosed" msprop:Generator_ColumnVarNameInTable="columnChoosed" msprop:Generator_ColumnPropNameInRow="Choosed" msprop:Generator_ColumnPropNameInTable="ChoosedColumn" msprop:Generator_UserColumnName="Choosed" type="xs:boolean" default="false" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PartsOfTableNames" msprop:Generator_TableClassName="PartsOfTableNamesDataTable" msprop:Generator_TableVarName="tablePartsOfTableNames" msprop:Generator_TablePropName="PartsOfTableNames" msprop:Generator_RowDeletingName="PartsOfTableNamesRowDeleting" msprop:Generator_UserTableName="PartsOfTableNames" msprop:Generator_RowChangingName="PartsOfTableNamesRowChanging" msprop:Generator_RowEvHandlerName="PartsOfTableNamesRowChangeEventHandler" msprop:Generator_RowDeletedName="PartsOfTableNamesRowDeleted" msprop:Generator_RowEvArgName="PartsOfTableNamesRowChangeEvent" msprop:Generator_RowChangedName="PartsOfTableNamesRowChanged" msprop:Generator_RowClassName="PartsOfTableNamesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" minOccurs="0" />
+              <xs:element name="PartOfName" msprop:Generator_ColumnVarNameInTable="columnPartOfName" msprop:Generator_ColumnPropNameInRow="PartOfName" msprop:Generator_ColumnPropNameInTable="PartOfNameColumn" msprop:Generator_UserColumnName="PartOfName" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="sqlBlockTemplatesKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:sqlBlockTemplates" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="PartsOfTablesKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PartsOfTableNames" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
