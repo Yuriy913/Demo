@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet101" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet101" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DataSet101" msprop:Generator_UserDSName="DataSet101">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Last_Param_Values" msprop:Generator_TableClassName="Last_Param_ValuesDataTable" msprop:Generator_TableVarName="tableLast_Param_Values" msprop:Generator_RowChangedName="Last_Param_ValuesRowChanged" msprop:Generator_TablePropName="Last_Param_Values" msprop:Generator_RowDeletingName="Last_Param_ValuesRowDeleting" msprop:Generator_RowChangingName="Last_Param_ValuesRowChanging" msprop:Generator_RowEvHandlerName="Last_Param_ValuesRowChangeEventHandler" msprop:Generator_RowDeletedName="Last_Param_ValuesRowDeleted" msprop:Generator_RowClassName="Last_Param_ValuesRow" msprop:Generator_UserTableName="Last_Param_Values" msprop:Generator_RowEvArgName="Last_Param_ValuesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ParamName" msprop:Generator_ColumnVarNameInTable="columnParamName" msprop:Generator_ColumnPropNameInRow="ParamName" msprop:Generator_ColumnPropNameInTable="ParamNameColumn" msprop:Generator_UserColumnName="ParamName" type="xs:string" minOccurs="0" />
+              <xs:element name="ParamValue" msprop:Generator_ColumnVarNameInTable="columnParamValue" msprop:Generator_ColumnPropNameInRow="ParamValue" msprop:Generator_ColumnPropNameInTable="ParamValueColumn" msprop:Generator_UserColumnName="ParamValue" type="xs:string" minOccurs="0" />
+              <xs:element name="TransactionID" msprop:Generator_ColumnVarNameInTable="columnTransactionID" msprop:Generator_ColumnPropNameInRow="TransactionID" msprop:Generator_ColumnPropNameInTable="TransactionIDColumn" msprop:Generator_UserColumnName="TransactionID" type="xs:int" minOccurs="0" />
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Transactions" msprop:Generator_TableClassName="TransactionsDataTable" msprop:Generator_TableVarName="tableTransactions" msprop:Generator_RowChangedName="TransactionsRowChanged" msprop:Generator_TablePropName="Transactions" msprop:Generator_RowDeletingName="TransactionsRowDeleting" msprop:Generator_RowChangingName="TransactionsRowChanging" msprop:Generator_RowEvHandlerName="TransactionsRowChangeEventHandler" msprop:Generator_RowDeletedName="TransactionsRowDeleted" msprop:Generator_RowClassName="TransactionsRow" msprop:Generator_UserTableName="Transactions" msprop:Generator_RowEvArgName="TransactionsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" type="xs:string" />
+              <xs:element name="ParentID" msprop:Generator_ColumnVarNameInTable="columnParentID" msprop:Generator_ColumnPropNameInRow="ParentID" msprop:Generator_ColumnPropNameInTable="ParentIDColumn" msprop:Generator_UserColumnName="ParentID" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="AutoRun" msprop:Generator_ColumnVarNameInTable="columnAutoRun" msprop:Generator_ColumnPropNameInRow="AutoRun" msprop:Generator_ColumnPropNameInTable="AutoRunColumn" msprop:Generator_UserColumnName="AutoRun" type="xs:boolean" default="false" />
+              <xs:element name="Chart" msprop:Generator_ColumnVarNameInTable="columnChart" msprop:Generator_ColumnPropNameInRow="Chart" msprop:Generator_ColumnPropNameInTable="ChartColumn" msprop:Generator_UserColumnName="Chart" type="xs:boolean" default="false" />
+              <xs:element name="ChartType" msprop:Generator_ColumnVarNameInTable="columnChartType" msprop:Generator_ColumnPropNameInRow="ChartType" msprop:Generator_ColumnPropNameInTable="ChartTypeColumn" msprop:Generator_UserColumnName="ChartType" type="xs:int" minOccurs="0" />
+              <xs:element name="DelphiChart" msprop:Generator_ColumnVarNameInTable="columnDelphiChart" msprop:Generator_ColumnPropNameInRow="DelphiChart" msprop:Generator_ColumnPropNameInTable="DelphiChartColumn" msprop:Generator_UserColumnName="DelphiChart" type="xs:boolean" default="false" />
+              <xs:element name="DelphiChartType" msprop:Generator_ColumnVarNameInTable="columnDelphiChartType" msprop:Generator_ColumnPropNameInRow="DelphiChartType" msprop:Generator_ColumnPropNameInTable="DelphiChartTypeColumn" msprop:Generator_UserColumnName="DelphiChartType" type="xs:int" minOccurs="0" />
+              <xs:element name="ServerID" msprop:Generator_ColumnVarNameInTable="columnServerID" msprop:Generator_ColumnPropNameInRow="ServerID" msprop:Generator_ColumnPropNameInTable="ServerIDColumn" msprop:Generator_UserColumnName="ServerID" type="xs:int" minOccurs="0" />
+              <xs:element name="DatabaseID" msprop:Generator_ColumnVarNameInTable="columnDatabaseID" msprop:Generator_ColumnPropNameInRow="DatabaseID" msprop:Generator_ColumnPropNameInTable="DatabaseIDColumn" msprop:Generator_UserColumnName="DatabaseID" type="xs:int" minOccurs="0" />
+              <xs:element name="UseDatabase" msprop:Generator_ColumnVarNameInTable="columnUseDatabase" msprop:Generator_ColumnPropNameInRow="UseDatabase" msprop:Generator_ColumnPropNameInTable="UseDatabaseColumn" msprop:Generator_UserColumnName="UseDatabase" type="xs:string" minOccurs="0" />
+              <xs:element name="LinkedServer" msprop:Generator_ColumnVarNameInTable="columnLinkedServer" msprop:Generator_ColumnPropNameInRow="LinkedServer" msprop:Generator_ColumnPropNameInTable="LinkedServerColumn" msprop:Generator_UserColumnName="LinkedServer" type="xs:string" minOccurs="0" />
+              <xs:element name="DataSetOutNumber" msprop:Generator_ColumnVarNameInTable="columnDataSetOutNumber" msprop:Generator_ColumnPropNameInRow="DataSetOutNumber" msprop:Generator_ColumnPropNameInTable="DataSetOutNumberColumn" msprop:Generator_UserColumnName="DataSetOutNumber" type="xs:decimal" default="1" />
+              <xs:element name="AutoRun_AfterChangeValue" msprop:Generator_ColumnVarNameInTable="columnAutoRun_AfterChangeValue" msprop:Generator_ColumnPropNameInRow="AutoRun_AfterChangeValue" msprop:Generator_ColumnPropNameInTable="AutoRun_AfterChangeValueColumn" msprop:Generator_UserColumnName="AutoRun_AfterChangeValue" type="xs:boolean" default="false" />
+              <xs:element name="NotSwitch_ToDataSetResult" msprop:Generator_ColumnVarNameInTable="columnNotSwitch_ToDataSetResult" msprop:Generator_ColumnPropNameInRow="NotSwitch_ToDataSetResult" msprop:Generator_ColumnPropNameInTable="NotSwitch_ToDataSetResultColumn" msprop:Generator_UserColumnName="NotSwitch_ToDataSetResult" type="xs:boolean" default="false" />
+              <xs:element name="UseLastValues" msprop:Generator_ColumnVarNameInTable="columnUseLastValues" msprop:Generator_ColumnPropNameInRow="UseLastValues" msprop:Generator_ColumnPropNameInTable="UseLastValuesColumn" msprop:Generator_UserColumnName="UseLastValues" type="xs:boolean" default="false" />
+              <xs:element name="UseImportValues" msprop:Generator_ColumnVarNameInTable="columnUseImportValues" msprop:Generator_ColumnPropNameInRow="UseImportValues" msprop:Generator_ColumnPropNameInTable="UseImportValuesColumn" msprop:Generator_UserColumnName="UseImportValues" type="xs:boolean" default="false" />
+              <xs:element name="ZoomFactor" msprop:Generator_ColumnVarNameInTable="columnZoomFactor" msprop:Generator_ColumnPropNameInRow="ZoomFactor" msprop:Generator_ColumnPropNameInTable="ZoomFactorColumn" msprop:Generator_UserColumnName="ZoomFactor" type="xs:double" default="1.5" minOccurs="0" />
+              <xs:element name="SessionAutoRun" msprop:Generator_ColumnVarNameInTable="columnSessionAutoRun" msprop:Generator_ColumnPropNameInRow="SessionAutoRun" msprop:Generator_ColumnPropNameInTable="SessionAutoRunColumn" msprop:Generator_UserColumnName="SessionAutoRun" type="xs:boolean" default="false" />
+              <xs:element name="UseDumpValues" msprop:Generator_ColumnVarNameInTable="columnUseDumpValues" msprop:Generator_ColumnPropNameInRow="UseDumpValues" msprop:Generator_ColumnPropNameInTable="UseDumpValuesColumn" msprop:Generator_UserColumnName="UseDumpValues" type="xs:boolean" default="false" />
+              <xs:element name="DumpRowIndex" msprop:Generator_ColumnVarNameInTable="columnDumpRowIndex" msprop:Generator_ColumnPropNameInRow="DumpRowIndex" msprop:Generator_ColumnPropNameInTable="DumpRowIndexColumn" msprop:Generator_UserColumnName="DumpRowIndex" type="xs:int" default="-1" />
+              <xs:element name="SortOrder" msprop:Generator_ColumnVarNameInTable="columnSortOrder" msprop:Generator_ColumnPropNameInRow="SortOrder" msprop:Generator_ColumnPropNameInTable="SortOrderColumn" msprop:Generator_UserColumnName="SortOrder" type="xs:int" default="100" minOccurs="0" />
+              <xs:element name="XmlColumn" msprop:Generator_ColumnVarNameInTable="columnXmlColumn" msprop:Generator_ColumnPropNameInRow="XmlColumn" msprop:Generator_ColumnPropNameInTable="XmlColumnColumn" msprop:Generator_UserColumnName="XmlColumn" type="xs:boolean" default="false" />
+              <xs:element name="Trees" msprop:Generator_ColumnVarNameInTable="columnTrees" msprop:Generator_ColumnPropNameInRow="Trees" msprop:Generator_ColumnPropNameInTable="TreesColumn" msprop:Generator_UserColumnName="Trees" type="xs:boolean" default="false" />
+              <xs:element name="TreeExpand" msprop:Generator_ColumnVarNameInTable="columnTreeExpand" msprop:Generator_ColumnPropNameInRow="TreeExpand" msprop:Generator_ColumnPropNameInTable="TreeExpandColumn" msprop:Generator_UserColumnName="TreeExpand" type="xs:boolean" default="false" />
+              <xs:element name="SessionAutoRun_AfterChangeValue" msprop:Generator_ColumnVarNameInTable="columnSessionAutoRun_AfterChangeValue" msprop:Generator_ColumnPropNameInRow="SessionAutoRun_AfterChangeValue" msprop:Generator_ColumnPropNameInTable="SessionAutoRun_AfterChangeValueColumn" msprop:Generator_UserColumnName="SessionAutoRun_AfterChangeValue" type="xs:boolean" default="false" />
+              <xs:element name="BackFromResult" msprop:Generator_ColumnVarNameInTable="columnBackFromResult" msprop:Generator_ColumnPropNameInRow="BackFromResult" msprop:Generator_ColumnPropNameInTable="BackFromResultColumn" msprop:Generator_UserColumnName="BackFromResult" type="xs:boolean" default="false" />
+              <xs:element name="BackFromResultAfterSeconds" msprop:Generator_ColumnVarNameInTable="columnBackFromResultAfterSeconds" msprop:Generator_ColumnPropNameInRow="BackFromResultAfterSeconds" msprop:Generator_ColumnPropNameInTable="BackFromResultAfterSecondsColumn" msprop:Generator_UserColumnName="BackFromResultAfterSeconds" type="xs:int" default="3" minOccurs="0" />
+              <xs:element name="Output" msprop:Generator_ColumnVarNameInTable="columnOutput" msprop:Generator_ColumnPropNameInRow="Output" msprop:Generator_ColumnPropNameInTable="OutputColumn" msprop:Generator_UserColumnName="Output" type="xs:boolean" default="false" />
+              <xs:element name="Output_Schema" msprop:Generator_ColumnVarNameInTable="columnOutput_Schema" msprop:Generator_ColumnPropNameInRow="Output_Schema" msprop:Generator_ColumnPropNameInTable="Output_SchemaColumn" msprop:Generator_UserColumnName="Output_Schema" type="xs:string" minOccurs="0" />
+              <xs:element name="Output_ByVertical" msprop:Generator_ColumnVarNameInTable="columnOutput_ByVertical" msprop:Generator_ColumnPropNameInRow="Output_ByVertical" msprop:Generator_ColumnPropNameInTable="Output_ByVerticalColumn" msprop:Generator_UserColumnName="Output_ByVertical" type="xs:boolean" default="false" />
+              <xs:element name="AfterRunToTransID" msprop:Generator_ColumnVarNameInTable="columnAfterRunToTransID" msprop:Generator_ColumnPropNameInRow="AfterRunToTransID" msprop:Generator_ColumnPropNameInTable="AfterRunToTransIDColumn" msprop:Generator_UserColumnName="AfterRunToTransID" type="xs:int" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Transaction_Params" msprop:Generator_TableClassName="Transaction_ParamsDataTable" msprop:Generator_TableVarName="tableTransaction_Params" msprop:Generator_RowChangedName="Transaction_ParamsRowChanged" msprop:Generator_TablePropName="Transaction_Params" msprop:Generator_RowDeletingName="Transaction_ParamsRowDeleting" msprop:Generator_RowChangingName="Transaction_ParamsRowChanging" msprop:Generator_RowEvHandlerName="Transaction_ParamsRowChangeEventHandler" msprop:Generator_RowDeletedName="Transaction_ParamsRowDeleted" msprop:Generator_RowClassName="Transaction_ParamsRow" msprop:Generator_UserTableName="Transaction_Params" msprop:Generator_RowEvArgName="Transaction_ParamsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TransactionID" msprop:Generator_ColumnVarNameInTable="columnTransactionID" msprop:Generator_ColumnPropNameInRow="TransactionID" msprop:Generator_ColumnPropNameInTable="TransactionIDColumn" msprop:Generator_UserColumnName="TransactionID" type="xs:int" minOccurs="0" />
+              <xs:element name="paramName" msprop:Generator_ColumnVarNameInTable="columnparamName" msprop:Generator_ColumnPropNameInRow="paramName" msprop:Generator_ColumnPropNameInTable="paramNameColumn" msprop:Generator_UserColumnName="paramName" type="xs:string" minOccurs="0" />
+              <xs:element name="Import" msprop:Generator_ColumnVarNameInTable="columnImport" msprop:Generator_ColumnPropNameInRow="Import" msprop:Generator_ColumnPropNameInTable="ImportColumn" msprop:Generator_UserColumnName="Import" type="xs:string" default="" minOccurs="0" />
+              <xs:element name="Type" msprop:Generator_ColumnVarNameInTable="columnType" msprop:Generator_ColumnPropNameInRow="Type" msprop:Generator_ColumnPropNameInTable="TypeColumn" msprop:Generator_UserColumnName="Type" type="xs:short" minOccurs="0" />
+              <xs:element name="Important" msprop:Generator_ColumnVarNameInTable="columnImportant" msprop:Generator_ColumnPropNameInRow="Important" msprop:Generator_ColumnPropNameInTable="ImportantColumn" msprop:Generator_UserColumnName="Important" type="xs:boolean" default="false" minOccurs="0" />
+              <xs:element name="Value" msprop:Generator_ColumnVarNameInTable="columnValue" msprop:Generator_ColumnPropNameInRow="Value" msprop:Generator_ColumnPropNameInTable="ValueColumn" msprop:Generator_UserColumnName="Value" type="xs:string" minOccurs="0" />
+              <xs:element name="AutoRun_AfterChange" msprop:Generator_ColumnVarNameInTable="columnAutoRun_AfterChange" msprop:Generator_ColumnPropNameInRow="AutoRun_AfterChange" msprop:Generator_ColumnPropNameInTable="AutoRun_AfterChangeColumn" msprop:Generator_UserColumnName="AutoRun_AfterChange" type="xs:boolean" default="false" minOccurs="0" />
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="SortIndex" msprop:Generator_ColumnVarNameInTable="columnSortIndex" msprop:Generator_ColumnPropNameInRow="SortIndex" msprop:Generator_ColumnPropNameInTable="SortIndexColumn" msprop:Generator_UserColumnName="SortIndex" type="xs:int" minOccurs="0" />
+              <xs:element name="DumpCol" msprop:Generator_ColumnVarNameInTable="columnDumpCol" msprop:Generator_ColumnPropNameInRow="DumpCol" msprop:Generator_ColumnPropNameInTable="DumpColColumn" msprop:Generator_UserColumnName="DumpCol" type="xs:string" minOccurs="0" />
+              <xs:element name="ParamID" msprop:Generator_ColumnVarNameInTable="columnParamID" msprop:Generator_ColumnPropNameInRow="ParamID" msprop:Generator_ColumnPropNameInTable="ParamIDColumn" msprop:Generator_UserColumnName="ParamID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Import_Values" msprop:Generator_TableClassName="Import_ValuesDataTable" msprop:Generator_TableVarName="tableImport_Values" msprop:Generator_RowChangedName="Import_ValuesRowChanged" msprop:Generator_TablePropName="Import_Values" msprop:Generator_RowDeletingName="Import_ValuesRowDeleting" msprop:Generator_RowChangingName="Import_ValuesRowChanging" msprop:Generator_RowEvHandlerName="Import_ValuesRowChangeEventHandler" msprop:Generator_RowDeletedName="Import_ValuesRowDeleted" msprop:Generator_RowClassName="Import_ValuesRow" msprop:Generator_UserTableName="Import_Values" msprop:Generator_RowEvArgName="Import_ValuesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="paramName" msprop:Generator_ColumnVarNameInTable="columnparamName" msprop:Generator_ColumnPropNameInRow="paramName" msprop:Generator_ColumnPropNameInTable="paramNameColumn" msprop:Generator_UserColumnName="paramName" type="xs:string" minOccurs="0" />
+              <xs:element name="Value" msprop:Generator_ColumnVarNameInTable="columnValue" msprop:Generator_ColumnPropNameInRow="Value" msprop:Generator_ColumnPropNameInTable="ValueColumn" msprop:Generator_UserColumnName="Value" type="xs:string" minOccurs="0" />
+              <xs:element name="TransactionID" msprop:Generator_ColumnVarNameInTable="columnTransactionID" msprop:Generator_ColumnPropNameInRow="TransactionID" msprop:Generator_ColumnPropNameInTable="TransactionIDColumn" msprop:Generator_UserColumnName="TransactionID" type="xs:int" minOccurs="0" />
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Export_Values" msprop:Generator_TableClassName="Export_ValuesDataTable" msprop:Generator_TableVarName="tableExport_Values" msprop:Generator_RowChangedName="Export_ValuesRowChanged" msprop:Generator_TablePropName="Export_Values" msprop:Generator_RowDeletingName="Export_ValuesRowDeleting" msprop:Generator_RowChangingName="Export_ValuesRowChanging" msprop:Generator_RowEvHandlerName="Export_ValuesRowChangeEventHandler" msprop:Generator_RowDeletedName="Export_ValuesRowDeleted" msprop:Generator_RowClassName="Export_ValuesRow" msprop:Generator_UserTableName="Export_Values" msprop:Generator_RowEvArgName="Export_ValuesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="paramName" msprop:Generator_ColumnVarNameInTable="columnparamName" msprop:Generator_ColumnPropNameInRow="paramName" msprop:Generator_ColumnPropNameInTable="paramNameColumn" msprop:Generator_UserColumnName="paramName" type="xs:string" minOccurs="0" />
+              <xs:element name="tableIndex" msprop:Generator_ColumnVarNameInTable="columntableIndex" msprop:Generator_ColumnPropNameInRow="tableIndex" msprop:Generator_ColumnPropNameInTable="tableIndexColumn" msprop:Generator_UserColumnName="tableIndex" type="xs:int" minOccurs="0" />
+              <xs:element name="rowIndex" msprop:Generator_ColumnVarNameInTable="columnrowIndex" msprop:Generator_ColumnPropNameInRow="rowIndex" msprop:Generator_ColumnPropNameInTable="rowIndexColumn" msprop:Generator_UserColumnName="rowIndex" type="xs:int" minOccurs="0" />
+              <xs:element name="fieldIndex" msprop:Generator_ColumnVarNameInTable="columnfieldIndex" msprop:Generator_ColumnPropNameInRow="fieldIndex" msprop:Generator_ColumnPropNameInTable="fieldIndexColumn" msprop:Generator_UserColumnName="fieldIndex" type="xs:int" minOccurs="0" />
+              <xs:element name="TransactionID" msprop:Generator_ColumnVarNameInTable="columnTransactionID" msprop:Generator_ColumnPropNameInRow="TransactionID" msprop:Generator_ColumnPropNameInTable="TransactionIDColumn" msprop:Generator_UserColumnName="TransactionID" type="xs:int" minOccurs="0" />
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Browser_URLs" msprop:Generator_TableClassName="Browser_URLsDataTable" msprop:Generator_TableVarName="tableBrowser_URLs" msprop:Generator_RowChangedName="Browser_URLsRowChanged" msprop:Generator_TablePropName="Browser_URLs" msprop:Generator_RowDeletingName="Browser_URLsRowDeleting" msprop:Generator_RowChangingName="Browser_URLsRowChanging" msprop:Generator_RowEvHandlerName="Browser_URLsRowChangeEventHandler" msprop:Generator_RowDeletedName="Browser_URLsRowDeleted" msprop:Generator_RowClassName="Browser_URLsRow" msprop:Generator_UserTableName="Browser_URLs" msprop:Generator_RowEvArgName="Browser_URLsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="URL" msprop:Generator_ColumnVarNameInTable="columnURL" msprop:Generator_ColumnPropNameInRow="URL" msprop:Generator_ColumnPropNameInTable="URLColumn" msprop:Generator_UserColumnName="URL" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Servers" msprop:Generator_TableClassName="ServersDataTable" msprop:Generator_TableVarName="tableServers" msprop:Generator_RowChangedName="ServersRowChanged" msprop:Generator_TablePropName="Servers" msprop:Generator_RowDeletingName="ServersRowDeleting" msprop:Generator_RowChangingName="ServersRowChanging" msprop:Generator_RowEvHandlerName="ServersRowChangeEventHandler" msprop:Generator_RowDeletedName="ServersRowDeleted" msprop:Generator_RowClassName="ServersRow" msprop:Generator_UserTableName="Servers" msprop:Generator_RowEvArgName="ServersRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" type="xs:string" minOccurs="0" />
+              <xs:element name="Primary" msprop:Generator_ColumnVarNameInTable="columnPrimary" msprop:Generator_ColumnPropNameInRow="Primary" msprop:Generator_ColumnPropNameInTable="PrimaryColumn" msprop:Generator_UserColumnName="Primary" type="xs:short" minOccurs="0" />
+              <xs:element name="PrimaryDatabase" msprop:Generator_ColumnVarNameInTable="columnPrimaryDatabase" msprop:Generator_ColumnPropNameInRow="PrimaryDatabase" msprop:Generator_ColumnPropNameInTable="PrimaryDatabaseColumn" msprop:Generator_UserColumnName="PrimaryDatabase" type="xs:string" default="Master" minOccurs="0" />
+              <xs:element name="connectionString" msprop:Generator_ColumnVarNameInTable="columnconnectionString" msprop:Generator_ColumnPropNameInRow="connectionString" msprop:Generator_ColumnPropNameInTable="connectionStringColumn" msprop:Generator_UserColumnName="connectionString" type="xs:string" minOccurs="0" />
+              <xs:element name="Last" msprop:Generator_ColumnVarNameInTable="columnLast" msprop:Generator_ColumnPropNameInRow="Last" msprop:Generator_ColumnPropNameInTable="LastColumn" msprop:Generator_UserColumnName="Last" type="xs:boolean" default="false" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Databases" msprop:Generator_TableClassName="DatabasesDataTable" msprop:Generator_TableVarName="tableDatabases" msprop:Generator_RowChangedName="DatabasesRowChanged" msprop:Generator_TablePropName="Databases" msprop:Generator_RowDeletingName="DatabasesRowDeleting" msprop:Generator_RowChangingName="DatabasesRowChanging" msprop:Generator_RowEvHandlerName="DatabasesRowChangeEventHandler" msprop:Generator_RowDeletedName="DatabasesRowDeleted" msprop:Generator_RowClassName="DatabasesRow" msprop:Generator_UserTableName="Databases" msprop:Generator_RowEvArgName="DatabasesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="ServerID" msprop:Generator_ColumnVarNameInTable="columnServerID" msprop:Generator_ColumnPropNameInRow="ServerID" msprop:Generator_ColumnPropNameInTable="ServerIDColumn" msprop:Generator_UserColumnName="ServerID" type="xs:int" minOccurs="0" />
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" type="xs:string" minOccurs="0" />
+              <xs:element name="Last" msprop:Generator_ColumnVarNameInTable="columnLast" msprop:Generator_ColumnPropNameInRow="Last" msprop:Generator_ColumnPropNameInTable="LastColumn" msprop:Generator_UserColumnName="Last" type="xs:boolean" default="false" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="LinkedServers" msprop:Generator_TableClassName="LinkedServersDataTable" msprop:Generator_TableVarName="tableLinkedServers" msprop:Generator_RowChangedName="LinkedServersRowChanged" msprop:Generator_TablePropName="LinkedServers" msprop:Generator_RowDeletingName="LinkedServersRowDeleting" msprop:Generator_RowChangingName="LinkedServersRowChanging" msprop:Generator_RowEvHandlerName="LinkedServersRowChangeEventHandler" msprop:Generator_RowDeletedName="LinkedServersRowDeleted" msprop:Generator_RowClassName="LinkedServersRow" msprop:Generator_UserTableName="LinkedServers" msprop:Generator_RowEvArgName="LinkedServersRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="ServerID" msprop:Generator_ColumnVarNameInTable="columnServerID" msprop:Generator_ColumnPropNameInRow="ServerID" msprop:Generator_ColumnPropNameInTable="ServerIDColumn" msprop:Generator_UserColumnName="ServerID" type="xs:int" minOccurs="0" />
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ColumnWidths" msprop:Generator_TableClassName="ColumnWidthsDataTable" msprop:Generator_TableVarName="tableColumnWidths" msprop:Generator_RowChangedName="ColumnWidthsRowChanged" msprop:Generator_TablePropName="ColumnWidths" msprop:Generator_RowDeletingName="ColumnWidthsRowDeleting" msprop:Generator_RowChangingName="ColumnWidthsRowChanging" msprop:Generator_RowEvHandlerName="ColumnWidthsRowChangeEventHandler" msprop:Generator_RowDeletedName="ColumnWidthsRowDeleted" msprop:Generator_RowClassName="ColumnWidthsRow" msprop:Generator_UserTableName="ColumnWidths" msprop:Generator_RowEvArgName="ColumnWidthsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="TransactionID" msprop:Generator_ColumnVarNameInTable="columnTransactionID" msprop:Generator_ColumnPropNameInRow="TransactionID" msprop:Generator_ColumnPropNameInTable="TransactionIDColumn" msprop:Generator_UserColumnName="TransactionID" type="xs:int" minOccurs="0" />
+              <xs:element name="tableIndex" msprop:Generator_ColumnVarNameInTable="columntableIndex" msprop:Generator_ColumnPropNameInRow="tableIndex" msprop:Generator_ColumnPropNameInTable="tableIndexColumn" msprop:Generator_UserColumnName="tableIndex" type="xs:int" />
+              <xs:element name="colIndex" msprop:Generator_ColumnVarNameInTable="columncolIndex" msprop:Generator_ColumnPropNameInRow="colIndex" msprop:Generator_ColumnPropNameInTable="colIndexColumn" msprop:Generator_UserColumnName="colIndex" type="xs:int" />
+              <xs:element name="width" msprop:Generator_ColumnVarNameInTable="columnwidth" msprop:Generator_ColumnPropNameInRow="width" msprop:Generator_ColumnPropNameInTable="widthColumn" msprop:Generator_UserColumnName="width" type="xs:int" default="-1" />
+              <xs:element name="mode" msprop:Generator_ColumnVarNameInTable="columnmode" msprop:Generator_ColumnPropNameInRow="mode" msprop:Generator_ColumnPropNameInTable="modeColumn" msprop:Generator_UserColumnName="mode" type="xs:int" default="-1" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Export_Import" msprop:Generator_TableClassName="Export_ImportDataTable" msprop:Generator_TableVarName="tableExport_Import" msprop:Generator_RowChangedName="Export_ImportRowChanged" msprop:Generator_TablePropName="Export_Import" msprop:Generator_RowDeletingName="Export_ImportRowDeleting" msprop:Generator_RowChangingName="Export_ImportRowChanging" msprop:Generator_RowEvHandlerName="Export_ImportRowChangeEventHandler" msprop:Generator_RowDeletedName="Export_ImportRowDeleted" msprop:Generator_RowClassName="Export_ImportRow" msprop:Generator_UserTableName="Export_Import" msprop:Generator_RowEvArgName="Export_ImportRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="ExportValueID" msprop:Generator_ColumnVarNameInTable="columnExportValueID" msprop:Generator_ColumnPropNameInRow="ExportValueID" msprop:Generator_ColumnPropNameInTable="ExportValueIDColumn" msprop:Generator_UserColumnName="ExportValueID" type="xs:int" minOccurs="0" />
+              <xs:element name="Import_TransactionID" msprop:Generator_ColumnVarNameInTable="columnImport_TransactionID" msprop:Generator_ColumnPropNameInRow="Import_TransactionID" msprop:Generator_ColumnPropNameInTable="Import_TransactionIDColumn" msprop:Generator_UserColumnName="Import_TransactionID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Params" msprop:Generator_TableClassName="ParamsDataTable" msprop:Generator_TableVarName="tableParams" msprop:Generator_RowChangedName="ParamsRowChanged" msprop:Generator_TablePropName="Params" msprop:Generator_RowDeletingName="ParamsRowDeleting" msprop:Generator_RowChangingName="ParamsRowChanging" msprop:Generator_RowEvHandlerName="ParamsRowChangeEventHandler" msprop:Generator_RowDeletedName="ParamsRowDeleted" msprop:Generator_RowClassName="ParamsRow" msprop:Generator_UserTableName="Params" msprop:Generator_RowEvArgName="ParamsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="paramName" msprop:Generator_ColumnVarNameInTable="columnparamName" msprop:Generator_ColumnPropNameInRow="paramName" msprop:Generator_ColumnPropNameInTable="paramNameColumn" msprop:Generator_UserColumnName="paramName" type="xs:string" />
+              <xs:element name="Type" msprop:Generator_ColumnVarNameInTable="columnType" msprop:Generator_ColumnPropNameInRow="Type" msprop:Generator_ColumnPropNameInTable="TypeColumn" msprop:Generator_UserColumnName="Type" type="xs:int" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Transaction_Values" msprop:Generator_TableClassName="Transaction_ValuesDataTable" msprop:Generator_TableVarName="tableTransaction_Values" msprop:Generator_TablePropName="Transaction_Values" msprop:Generator_RowDeletingName="Transaction_ValuesRowDeleting" msprop:Generator_RowChangingName="Transaction_ValuesRowChanging" msprop:Generator_RowEvHandlerName="Transaction_ValuesRowChangeEventHandler" msprop:Generator_RowDeletedName="Transaction_ValuesRowDeleted" msprop:Generator_UserTableName="Transaction_Values" msprop:Generator_RowChangedName="Transaction_ValuesRowChanged" msprop:Generator_RowEvArgName="Transaction_ValuesRowChangeEvent" msprop:Generator_RowClassName="Transaction_ValuesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TransactionID" msprop:Generator_ColumnVarNameInTable="columnTransactionID" msprop:Generator_ColumnPropNameInRow="TransactionID" msprop:Generator_ColumnPropNameInTable="TransactionIDColumn" msprop:Generator_UserColumnName="TransactionID" type="xs:int" />
+              <xs:element name="Value" msprop:Generator_ColumnVarNameInTable="columnValue" msprop:Generator_ColumnPropNameInRow="Value" msprop:Generator_ColumnPropNameInTable="ValueColumn" msprop:Generator_UserColumnName="Value" type="xs:string" />
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Last_Param_ValuesKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//Last_Param_Values" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//Transactions" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="Transaction_ParamsKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//Transaction_Params" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="Import_ValuesKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//Import_Values" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="Export_ValuesKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//Export_Values" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="Browser_URLsKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//Browser_URLs" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="Servers_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//Servers" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="DatabasesKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//Databases" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="LinkedServersKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//LinkedServers" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="ColumnWidthsKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//ColumnWidths" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="ParamsKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//Params" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:unique name="Transaction_ValuesKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//Transaction_Values" />
+      <xs:field xpath="ID" />
+    </xs:unique>
+    <xs:keyref name="FK_Export_Values_Export_Import" refer="Export_ValuesKey1" msprop:rel_Generator_UserChildTable="Export_Import" msprop:rel_Generator_ChildPropName="GetExport_ImportRows" msprop:rel_Generator_UserRelationName="FK_Export_Values_Export_Import" msprop:rel_Generator_ParentPropName="Export_ValuesRow" msprop:rel_Generator_RelationVarName="relationFK_Export_Values_Export_Import" msprop:rel_Generator_UserParentTable="Export_Values">
+      <xs:selector xpath=".//Export_Import" />
+      <xs:field xpath="ExportValueID" />
+    </xs:keyref>
+    <xs:keyref name="Transactions_ColumnWidths" refer="Constraint1" msprop:rel_Generator_UserChildTable="ColumnWidths" msprop:rel_Generator_ChildPropName="GetColumnWidthsRows" msprop:rel_Generator_UserRelationName="Transactions_ColumnWidths" msprop:rel_Generator_RelationVarName="relationTransactions_ColumnWidths" msprop:rel_Generator_UserParentTable="Transactions" msprop:rel_Generator_ParentPropName="TransactionsRow">
+      <xs:selector xpath=".//ColumnWidths" />
+      <xs:field xpath="TransactionID" />
+    </xs:keyref>
+    <xs:keyref name="Server_Databases" refer="Servers_Constraint1" msprop:rel_Generator_UserChildTable="Databases" msprop:rel_Generator_ChildPropName="GetDatabasesRows" msprop:rel_Generator_UserRelationName="Server_Databases" msprop:rel_Generator_ParentPropName="ServersRow" msprop:rel_Generator_RelationVarName="relationServer_Databases" msprop:rel_Generator_UserParentTable="Servers">
+      <xs:selector xpath=".//Databases" />
+      <xs:field xpath="ServerID" />
+    </xs:keyref>
+    <xs:keyref name="Trans_Export" refer="Constraint1" msprop:rel_Generator_UserChildTable="Export_Values" msprop:rel_Generator_ChildPropName="GetExport_ValuesRows" msprop:rel_Generator_UserRelationName="Trans_Export" msprop:rel_Generator_RelationVarName="relationTrans_Export" msprop:rel_Generator_UserParentTable="Transactions" msprop:rel_Generator_ParentPropName="TransactionsRow">
+      <xs:selector xpath=".//Export_Values" />
+      <xs:field xpath="TransactionID" />
+    </xs:keyref>
+    <xs:keyref name="Transactions_Import_Values" refer="Constraint1" msprop:rel_Generator_UserChildTable="Import_Values" msprop:rel_Generator_ChildPropName="GetImport_ValuesRows" msprop:rel_Generator_UserRelationName="Transactions_Import_Values" msprop:rel_Generator_RelationVarName="relationTransactions_Import_Values" msprop:rel_Generator_UserParentTable="Transactions" msprop:rel_Generator_ParentPropName="TransactionsRow">
+      <xs:selector xpath=".//Import_Values" />
+      <xs:field xpath="TransactionID" />
+    </xs:keyref>
+    <xs:keyref name="Trans_Params" refer="Constraint1" msprop:rel_Generator_UserChildTable="Transaction_Params" msprop:rel_Generator_ChildPropName="GetTransaction_ParamsRows" msprop:rel_Generator_UserRelationName="Trans_Params" msprop:rel_Generator_ParentPropName="TransactionsRow" msprop:rel_Generator_RelationVarName="relationTrans_Params" msprop:rel_Generator_UserParentTable="Transactions">
+      <xs:selector xpath=".//Transaction_Params" />
+      <xs:field xpath="TransactionID" />
+    </xs:keyref>
+    <xs:keyref name="FK_Params_Transaction_Params" refer="ParamsKey1" msprop:rel_Generator_UserChildTable="Transaction_Params" msprop:rel_Generator_ChildPropName="GetTransaction_ParamsRows" msprop:rel_Generator_UserRelationName="FK_Params_Transaction_Params" msprop:rel_Generator_RelationVarName="relationFK_Params_Transaction_Params" msprop:rel_Generator_UserParentTable="Params" msprop:rel_Generator_ParentPropName="ParamsRow">
+      <xs:selector xpath=".//Transaction_Params" />
+      <xs:field xpath="ParamID" />
+    </xs:keyref>
+    <xs:keyref name="Server_Trans" refer="Servers_Constraint1" msprop:rel_Generator_UserChildTable="Transactions" msprop:rel_Generator_ChildPropName="GetTransactionsRows" msprop:rel_Generator_UserRelationName="Server_Trans" msprop:rel_Generator_ParentPropName="ServersRow" msprop:rel_Generator_RelationVarName="relationServer_Trans" msprop:rel_Generator_UserParentTable="Servers">
+      <xs:selector xpath=".//Transactions" />
+      <xs:field xpath="ServerID" />
+    </xs:keyref>
+    <xs:keyref name="Trans_Values" refer="Constraint1" msprop:rel_Generator_UserChildTable="Last_Param_Values" msprop:rel_Generator_ChildPropName="GetLast_Param_ValuesRows" msprop:rel_Generator_UserRelationName="Trans_Values" msprop:rel_Generator_RelationVarName="relationTrans_Values" msprop:rel_Generator_UserParentTable="Transactions" msprop:rel_Generator_ParentPropName="TransactionsRow">
+      <xs:selector xpath=".//Last_Param_Values" />
+      <xs:field xpath="TransactionID" />
+    </xs:keyref>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="Servers___LinkedServers" msdata:parent="Servers" msdata:child="LinkedServers" msdata:parentkey="ID" msdata:childkey="ServerID" msprop:Generator_UserChildTable="LinkedServers" msprop:Generator_ChildPropName="GetLinkedServersRows" msprop:Generator_UserRelationName="Servers___LinkedServers" msprop:Generator_ParentPropName="ServersRow" msprop:Generator_RelationVarName="relationServers___LinkedServers" msprop:Generator_UserParentTable="Servers" />
+      <msdata:Relationship name="Transactions_Transaction_Values" msdata:parent="Transactions" msdata:child="Transaction_Values" msdata:parentkey="ID" msdata:childkey="TransactionID" msprop:Generator_UserChildTable="Transaction_Values" msprop:Generator_ChildPropName="GetTransaction_ValuesRows" msprop:Generator_UserRelationName="Transactions_Transaction_Values" msprop:Generator_ParentPropName="TransactionsRow" msprop:Generator_RelationVarName="relationTransactions_Transaction_Values" msprop:Generator_UserParentTable="Transactions" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>
