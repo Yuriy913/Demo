@@ -1,0 +1,117 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="support_team.master.cs" Inherits="support_team" %>
+<%@ Register Src="user_controls/page_menu.ascx" TagName="page_menu" TagPrefix="default_parts" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server" id="mpheader">
+<title>You should register this page in the system !!!</title>
+</head>
+<body onload="myclock()">
+    <form id="main_form" runat="server">
+    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+        <td>
+        <!-- Top -->
+        
+  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color:#0097FE;">
+    <tr>
+        <td align="left" style="width:100%;">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td align="left"><img src="~/images/logo_man.jpg" alt="" id="Img1" runat="server" width="108" height="102"/></td>
+                    <td align="left" valign="top" style="width:100%;">
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                         <tr>
+                            <td valign="bottom">
+                            <!-- Menu -->
+                            <div><asp:placeholder id="menu_Placeholder" runat="server">
+                            <default_parts:page_menu ID="page_menu1" runat="server"/>
+                            </asp:placeholder>
+                            </div>
+                            <!-- End Menu -->
+                            </td>
+                         </tr>
+                        </table>   
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                           <tr>
+                                <td align="left" style="font-size:25px; font-family: Courier New; color:#26B9FE; font-weight:bold; text-decoration: underline;">
+                                    NETOLOGIC INC.
+                                </td>
+                                <td rowspan="2" align="right" style="font-size:10px; font-family: Verdana; color:#284E98; font-weight:bold;">
+                                <table border="0" cellpadding="1" cellspacing="0">
+                                <tr>
+                                    <td valign="top" align="right">
+                                    <asp:Label ID="UserName" runat="server" CssClass="txtTopWhite"></asp:Label><br/>
+                                    <asp:Label ID="LastVisit" runat="server" CssClass="txtTopWhite"></asp:Label><br/>
+                                    <asp:Label ID="FromIP" runat="server" CssClass="txtTopWhite"></asp:Label><br/>
+                                    <asp:LinkButton ID="LogOut" runat="server" CssClass="txtTopWhite" EnableViewState="false" OnClick="LogOut_Click"></asp:LinkButton>
+                                    </td>
+                                    <td valign="top" align="right">&nbsp;</td>
+                                    <td  align="center" style="width:100px; height:50px; background-image:url(<%= ResolveUrl("~/images/belarus_flag.jpg") %>); background-repeat:no-repeat;">Mogilev:<div id="clockexam_bel" runat="server"></div></td>
+                                    <td  align="center" style="width:100px; height:50px; background-image:url(<%= ResolveUrl("~/images/usa_flag.jpg") %>); background-repeat:no-repeat;">New York:<div id="clockexam_usa" runat="server"></div></td>
+                                </tr>
+                                </table>
+                                </td>
+                           </tr>
+                           <tr>
+                                <td align="left" valign="top" style="font-size:18px; font-family: Courier New; color:#26B9FE; font-weight:bold;">
+                                    SUPPORT TEAM
+                                </td>
+                           </tr>
+                           <tr>
+                                <td colspan="2" align="left" valign="top" class="MapLine"><div id="map_panel" runat="server"></div></td>
+                           </tr>
+                         </table> </td>
+                </tr>
+            </table>
+        </td>
+        <td align="right">
+            <asp:Calendar ID="CalendarTop" runat="server" BorderStyle="None" CellPadding="0" CellSpacing="1" Font-Names="Tahoma" Font-Size="9px" OnSelectionChanged="CalendarTop_SelectionChanged" BorderColor="White" ForeColor="Purple" EnableTheming="True" NextPrevFormat="ShortMonth">
+            <NextPrevStyle BorderStyle="None" Font-Bold="True" ForeColor="LightGray" />
+            <DayStyle BackColor="#26B9FE" />
+            <SelectedDayStyle BackColor="RoyalBlue" ForeColor="LightGray" />
+            <TodayDayStyle BackColor="White" />
+            <WeekendDayStyle BackColor="LightSteelBlue" />
+            <DayHeaderStyle Font-Overline="False" ForeColor="LightGray" />
+            <TitleStyle BackColor="RoyalBlue" Font-Bold="True" ForeColor="LightGray" />
+            </asp:Calendar>
+        </td>
+    </tr>
+  </table>
+       
+        <!-- End Top -->
+        </td>
+    </tr>
+    <tr>
+      <td align="center">
+      <table width="97%" cellpadding="15" cellspacing="0" border="0">
+      <tr><td style="height:14px"></td></tr>
+        <tr>
+            <td  class="FrameColor" align="center">
+                <div><asp:contentplaceholder id="main" runat="server"></asp:contentplaceholder></div>
+            </td>
+        </tr>
+        <tr><td style="height:10px"></td></tr>
+       </table>
+      </td>
+    </tr>
+    <tr>
+        <td>
+        <!-- Footer -->
+        <table width="100%" border="0" cellspacing="5" cellpadding="0">
+           <tr>
+            <td align="center"><img alt="" src="~/images/footer.gif" id="FootImage" runat="server" /></td>
+           </tr>
+           <tr>
+              <td align="center" class="txtFooter">&copy; Copyright 2007-<asp:Label ID="f_Lbl1" runat="server"></asp:Label></td>
+            </tr>
+            <tr>
+            <td align="center" class="txtFooter">[Support Center]</td>
+            </tr>
+        </table>
+        <!-- End Footer -->
+        </td>
+    </tr>
+    </table>
+</form>
+</body>
+</html>
