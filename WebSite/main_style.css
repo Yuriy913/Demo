@@ -1,0 +1,229 @@
+﻿body 
+{
+	background-color: #ffffff; 
+	margin-left:0; 
+	margin-right:0; 
+	margin-top:0; 
+	margin-bottom:0
+}
+.txtFooter 
+{
+	font-family: Verdana; 
+	font-size: 10px; 
+	color: #666666; 
+	text-decoration: none
+}
+
+.txtPagesLabel 
+{
+	font-family: Verdana; 
+	font-size: 10px; 
+	color: black;
+	text-decoration: none
+}
+
+.txtPagesResult 
+{
+	font-family: Verdana; 
+	font-size: 10px; 
+	font-weight:bold;
+	color: black;
+	text-decoration: none
+}
+
+
+
+
+.txtWarning 
+{
+	font-family: Verdana; 
+	font-size: 14px; 
+	color: red; 
+	text-decoration: none
+}
+
+.txtFormWhite 
+{
+	font-family: Verdana; 
+	font-size: 11px; 
+	color: White; 
+	font-weight: bold
+}
+
+.txtTopWhite 
+{
+	font-family: Arial; 
+	font-size: 10px; 
+	color: White; 
+	font-weight: bold
+}
+
+
+.menuBgImage
+{
+	background-image: url(images/logo_man_bg.jpg);
+}
+
+.DropDownList
+{
+	font-size: 8pt;
+	color: black;
+	font-family: Verdana;
+}
+
+.TextBox
+{
+	font-size: 8pt;
+	color: black;
+	font-family: Verdana;
+	border-style:solid;
+	border-color:Gray;
+	border-width: 1px;
+	
+}
+
+.Button
+{
+	font-size: 8pt;
+	color: black;
+	font-family: Verdana
+}
+
+.Label
+{
+	font-size: 8pt;
+	color: navy;
+	font-family: Verdana;
+	font-weight: bold
+}
+
+.RedLabel
+{
+	font-size: 7pt;
+	color: red;
+	font-family: Verdana;
+	font-weight: normal 
+}
+
+.CheckBox
+{
+	font-size: 8pt;
+	color: navy;
+	font-family: Verdana;
+	font-weight: bold
+}
+
+.LinkButton
+{
+	font-size: 7pt;
+	color: Black;
+	font-family: Verdana;
+	font-weight: bold
+}
+
+table.GridViewDark
+{
+	color:Black;
+	background-color:#DEDFDE;
+	border-color: Gray;
+	border-width:1px;
+	border-style:Solid;
+}
+
+table.GridView
+{
+	background-color:#DEDFDE;
+	border-color: Gray;
+	border-width:1px;
+	border-style:Solid;
+	font-family:Verdana;
+	font-size:7pt;
+	font-style:normal;
+	text-decoration:none
+}
+
+th.GridView 
+{
+	color:#E7E7FF;
+	background-color:#4A3C8C;
+	font-weight:bold
+}
+
+
+tr.GridView
+{
+	color:Black;
+	background-color:#DEDFDE
+}
+
+td.GridViewHead 
+{
+	color:#E7E7FF;
+	background-color:#4A3C8C;
+	font-weight:bold
+}
+
+tr.GridViewHead 
+{
+	color:#E7E7FF;
+	background-color:#4A3C8C;
+	font-weight:bold
+}
+ 
+.FrameColor
+{
+	background-color: #fffacd; 
+	border-right: silver 1px solid; 
+	border-top: silver 1px solid; 
+	border-left: silver 1px solid; 
+	border-bottom: silver 1px solid
+}
+
+.MapLine
+{
+	font-size: 8pt;
+	color: White;
+	font-family: Verdana;
+	font-weight: Bold
+}
+
+
+table.GridViewMini
+{
+	background-color:#DEDFDE;
+	border-color: Gray;
+	border-width:1px;
+	border-style:Solid;
+	font-family: Verdana;
+	font-size:7pt;
+	font-style:normal;
+	text-decoration:none
+}
+
+th.GridViewMini 
+{
+	color:#E7E7FF;
+	background-color:#4A3C8C;
+	font-weight:bold
+}
+
+
+tr.GridViewMini
+{
+	color:Black;
+	background-color:#DEDFDE
+}
+
+td.GridViewHeadMini 
+{
+	color:#E7E7FF;
+	background-color:#4A3C8C;
+	font-size:7pt
+}
+
+tr.GridViewHeadMini 
+{
+	color:#E7E7FF;
+	background-color:#4A3C8C;
+	font-size:7pt
+}
