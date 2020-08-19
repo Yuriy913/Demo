@@ -1,0 +1,1313 @@
+<?xml version="1.0" standalone="yes"?>
+<sqlTemplatesDataSet xmlns="http://tempuri.org/sqlTemplatesDataSet.xsd">
+  <sqlBlockTemplates>
+    <ID>1</ID>
+    <Description>SELECT</Description>
+    <BlockTemplate>SELECT TOP 100 * FROM # (nolock) ORDER BY ID DESC</BlockTemplate>
+    <ParentID>0</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>true</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>3</ID>
+    <Description>ALTER</Description>
+    <BlockTemplate>ALTER TABLE # ADD</BlockTemplate>
+    <ParentID>0</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>4</ID>
+    <Description>DROP</Description>
+    <BlockTemplate>ALTER TABLE # ADD</BlockTemplate>
+    <ParentID>0</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>5</ID>
+    <Description>CREATE</Description>
+    <BlockTemplate>CREATE TABLE # (
+ID int IDENTITY(1,1) PRIMARY KEY, 
+AddedTime datetime NOT NULL DEFAULT getdate(),
+ParentID int NOT NULL FOREIGN KEY REFERENCES #()
+)</BlockTemplate>
+    <ParentID>0</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>6</ID>
+    <Description>CREATE TABLE</Description>
+    <BlockTemplate>CREATE TABLE # (
+ID int IDENTITY(1,1) PRIMARY KEY, 
+ParentID int NOT NULL FOREIGN KEY REFERENCES #(),
+AddedTime datetime NOT NULL DEFAULT getdate()
+)</BlockTemplate>
+    <ParentID>5</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>8</ID>
+    <Description>INSERT</Description>
+    <BlockTemplate>INSERT # () VALUES ()</BlockTemplate>
+    <ParentID>0</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>9</ID>
+    <Description>DELETE</Description>
+    <BlockTemplate>DELETE # WHERE</BlockTemplate>
+    <ParentID>0</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>10</ID>
+    <Description>UPDATE</Description>
+    <BlockTemplate>UPDATE # SET Var  = @Var WHERE ID = @ID
+
+</BlockTemplate>
+    <ParentID>0</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>11</ID>
+    <Description>SELECT TOP 100 * FROM #</Description>
+    <BlockTemplate>SELECT TOP 100 * FROM # (nolock) WHERE
+ORDER BY ID DESC</BlockTemplate>
+    <ParentID>1</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>12</ID>
+    <Description>ALTER TABLE</Description>
+    <BlockTemplate>ALTER TABLE # ADD</BlockTemplate>
+    <ParentID>3</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>13</ID>
+    <Description>ALTER TABLE # ADD</Description>
+    <BlockTemplate>ALTER TABLE # ADD NOT NULL DEFAULT</BlockTemplate>
+    <ParentID>12</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>14</ID>
+    <Description>ALTER TABLE # ALTER</Description>
+    <BlockTemplate>ALTER TABLE # ALTER</BlockTemplate>
+    <ParentID>12</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>15</ID>
+    <Description>ALTER TABLE # DROP</Description>
+    <BlockTemplate>ALTER TABLE # DROP</BlockTemplate>
+    <ParentID>12</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>16</ID>
+    <Description>UPDATE # SET vars</Description>
+    <BlockTemplate>UPDATE # SET var = WHERE =</BlockTemplate>
+    <ParentID>10</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>17</ID>
+    <Description>UPDATE # SET vars FROM # JOIN #</Description>
+    <BlockTemplate>UPDATE # SET var =
+FROM # t1 (nolock)
+JOIN # t2 (nolock) ON t2. = t1.
+WHERE =</BlockTemplate>
+    <ParentID>10</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>18</ID>
+    <Description>DELETE #</Description>
+    <BlockTemplate>DELETE # WHERE</BlockTemplate>
+    <ParentID>9</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>19</ID>
+    <Description>CREATE INDEX</Description>
+    <BlockTemplate>CREATE INDEX ix_ ON # ()</BlockTemplate>
+    <ParentID>5</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>20</ID>
+    <Description>DROP TABLE #</Description>
+    <BlockTemplate>ALTER TABLE # ADD</BlockTemplate>
+    <ParentID>4</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>24</ID>
+    <Description>CREATE UNIQUE INDEX</Description>
+    <BlockTemplate>CREATE UNIQUE INDEX uix_ ON # ()</BlockTemplate>
+    <ParentID>5</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>25</ID>
+    <Description>SELECT TOP 100 * FROM # JOIN # </Description>
+    <BlockTemplate>SELECT TOP 100 * 
+FROM # t1 (nolock)
+JOIN # t2 (nolock) 
+ON t2. = t1.
+WHERE t2. = t1.</BlockTemplate>
+    <ParentID>1</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>26</ID>
+    <Description>SELECT TOP 100 * INTO # FROM #</Description>
+    <BlockTemplate>SELECT TOP 100 * INTO # FROM # WHERE</BlockTemplate>
+    <ParentID>1</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>27</ID>
+    <Description>SELECT TOP 100 * INTO # FROM # JOIN # </Description>
+    <BlockTemplate>SELECT TOP 100 * INTO # FROM # JOIN # WHERE</BlockTemplate>
+    <ParentID>1</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>28</ID>
+    <Description>ALTER TABLE # ALTER COLUMN</Description>
+    <BlockTemplate>ALTER TABLE # ALTER COLUMN</BlockTemplate>
+    <ParentID>14</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>29</ID>
+    <Description>ALTER TABLE # DROP COLUMN</Description>
+    <BlockTemplate>ALTER TABLE # DROP COLUMN name</BlockTemplate>
+    <ParentID>15</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>30</ID>
+    <Description>ALTER TABLE # DROP CONSTRAINT</Description>
+    <BlockTemplate>ALTER TABLE # DROP CONSTRAINT name</BlockTemplate>
+    <ParentID>15</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>31</ID>
+    <Description>ALTER VIEW</Description>
+    <BlockTemplate>ALTER VIEW view_name AS 
+SELECT * FROM #
+</BlockTemplate>
+    <ParentID>3</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>32</ID>
+    <Description>ALTER TRIGGER</Description>
+    <BlockTemplate>ALTER TRIGGER schema_name.trigger_name 
+ON ( table | view )  
+( FOR | AFTER | INSTEAD OF ) 
+{ [ DELETE ] [ , ] [ INSERT ] [ , ] [ UPDATE ] } 
+AS  sql_statement
+</BlockTemplate>
+    <ParentID>3</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>33</ID>
+    <Description>CREATE VIEW</Description>
+    <BlockTemplate>CREATE VIEW view_name 
+AS select_statement 
+</BlockTemplate>
+    <ParentID>5</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>34</ID>
+    <Description>CREATE UNIQUE CLUSTERED</Description>
+    <BlockTemplate>CREATE UNIQUE CLUSTERED ucix_ ON # ()</BlockTemplate>
+    <ParentID>5</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>35</ID>
+    <Description>CREATE CLUSTERED</Description>
+    <BlockTemplate>CREATE CLUSTERED ucix_ ON # ()</BlockTemplate>
+    <ParentID>5</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>36</ID>
+    <Description>INSERT # () VALUES ()</Description>
+    <BlockTemplate>INSERT # () VALUES ()</BlockTemplate>
+    <ParentID>8</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>37</ID>
+    <Description>INSERT # () SELECT</Description>
+    <BlockTemplate>INSERT # () SELECT</BlockTemplate>
+    <ParentID>8</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>38</ID>
+    <Description>ALTER TABLE # ADD CONSTRAINT DF_Name DEFAULT</Description>
+    <BlockTemplate>ALTER TABLE # ADD CONSTRAINT DF_Name 
+DEFAULT expr FOR column 
+[WITH VALUES]
+</BlockTemplate>
+    <ParentID>13</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>39</ID>
+    <Description>ALTER TABLE # ADD CONSTRAINT CH_Name CHECK</Description>
+    <BlockTemplate>ALTER TABLE # ADD CONSTRAINT CH_Name 
+CHECK ( logical_expression )
+</BlockTemplate>
+    <ParentID>13</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>40</ID>
+    <Description>ALTER TABLE # ADD CONSTRAINT FK_Name FOREIGN KEY </Description>
+    <BlockTemplate>ALTER TABLE # ADD CONSTRAINT FK_Name 
+FOREIGN KEY (column)
+REFERENCES referenced_table_name (ref_column)
+
+</BlockTemplate>
+    <ParentID>13</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>41</ID>
+    <Description>CREATE TRIGGER</Description>
+    <BlockTemplate>CREATE TRIGGER [ schema_name . ]trigger_name 
+ON { table | view } 
+{ FOR | AFTER | INSTEAD OF } 
+{ [ INSERT ] [ , ] [ UPDATE ] [ , ] [ DELETE ] } 
+[ WITH APPEND ] 
+ AS  sql_statement </BlockTemplate>
+    <ParentID>5</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>42</ID>
+    <Description>DEFINE</Description>
+    <BlockTemplate>COLUMN DATA TYPES</BlockTemplate>
+    <ParentID>0</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>43</ID>
+    <Description>Exact Numerics</Description>
+    <BlockTemplate>Exact Numerics</BlockTemplate>
+    <ParentID>132</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>44</ID>
+    <Description>Approximate Numerics</Description>
+    <BlockTemplate>Approximate Numerics</BlockTemplate>
+    <ParentID>132</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>45</ID>
+    <Description>Date and Time</Description>
+    <BlockTemplate>Date and Time</BlockTemplate>
+    <ParentID>132</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>46</ID>
+    <Description>Character Strings</Description>
+    <BlockTemplate>Character Strings</BlockTemplate>
+    <ParentID>132</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>47</ID>
+    <Description>Unicode Character Strings</Description>
+    <BlockTemplate>Unicode Character Strings</BlockTemplate>
+    <ParentID>132</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>48</ID>
+    <Description>Binary Strings</Description>
+    <BlockTemplate>Binary Strings</BlockTemplate>
+    <ParentID>132</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>49</ID>
+    <Description>Other Data Types</Description>
+    <BlockTemplate>Other Data Types</BlockTemplate>
+    <ParentID>132</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>50</ID>
+    <Description>INT</Description>
+    <BlockTemplate>DEFAULT @var int SET @var=</BlockTemplate>
+    <ParentID>43</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>51</ID>
+    <Description>BIT</Description>
+    <BlockTemplate>DEFAULT @var bit SET @var=</BlockTemplate>
+    <ParentID>43</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>52</ID>
+    <Description>DECIMAL</Description>
+    <BlockTemplate>DEFAULT @var decimal SET @var=</BlockTemplate>
+    <ParentID>43</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>53</ID>
+    <Description>MONEY</Description>
+    <BlockTemplate>DEFAULT @var money SET @var=</BlockTemplate>
+    <ParentID>43</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>54</ID>
+    <Description>REAL</Description>
+    <BlockTemplate>DEFAULT @var real SET @var=</BlockTemplate>
+    <ParentID>44</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>55</ID>
+    <Description>FLOAT</Description>
+    <BlockTemplate>DEFAULT @var float SET @var=</BlockTemplate>
+    <ParentID>44</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>56</ID>
+    <Description>DATE</Description>
+    <BlockTemplate>DEFAULT @var date SET @var=</BlockTemplate>
+    <ParentID>45</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>57</ID>
+    <Description>DATETIME</Description>
+    <BlockTemplate>DEFAULT @var datetime SET @var=</BlockTemplate>
+    <ParentID>45</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>58</ID>
+    <Description>SMALLDATETIME</Description>
+    <BlockTemplate>DEFAULT @var smalldatetime SET @var=</BlockTemplate>
+    <ParentID>45</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>59</ID>
+    <Description>TIME</Description>
+    <BlockTemplate>DEFAULT @var time SET @var=</BlockTemplate>
+    <ParentID>45</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>60</ID>
+    <Description>VARCHAR</Description>
+    <BlockTemplate>DEFAULT @var varchar SET @var=</BlockTemplate>
+    <ParentID>46</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>61</ID>
+    <Description>CHAR</Description>
+    <BlockTemplate>DEFAULT @var char SET @var=</BlockTemplate>
+    <ParentID>46</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>62</ID>
+    <Description>TEXT</Description>
+    <BlockTemplate>DEFAULT @var text SET @var=</BlockTemplate>
+    <ParentID>46</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>63</ID>
+    <Description>NVARCHAR</Description>
+    <BlockTemplate>DEFAULT @var nvarchar SET @var=</BlockTemplate>
+    <ParentID>47</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>65</ID>
+    <Description>NCHAR</Description>
+    <BlockTemplate>DEFAULT @var nchar SET @var=</BlockTemplate>
+    <ParentID>47</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>66</ID>
+    <Description>NTEXT</Description>
+    <BlockTemplate>DEFAULT @var ntext SET @var=</BlockTemplate>
+    <ParentID>47</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>67</ID>
+    <Description>VARBINARY</Description>
+    <BlockTemplate>DEFAULT @var varbinary SET @var=</BlockTemplate>
+    <ParentID>48</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>68</ID>
+    <Description>BINARY</Description>
+    <BlockTemplate>DEFAULT @var binary SET @var=</BlockTemplate>
+    <ParentID>48</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>69</ID>
+    <Description>IMAGE</Description>
+    <BlockTemplate>DEFAULT @var image SET @var=</BlockTemplate>
+    <ParentID>48</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>70</ID>
+    <Description>XML</Description>
+    <BlockTemplate>DEFAULT @var xml SET @var=</BlockTemplate>
+    <ParentID>49</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>71</ID>
+    <Description>uniqueidentifier</Description>
+    <BlockTemplate>DEFAULT @var uniqueidentifier SET @var=
+
+CREATE TABLE &lt;schema_name, sysname, dbo&gt;.&lt;table_name, sysname, sample_table&gt;
+(
+	&lt;columns_in_primary_key, , c1&gt; &lt;column1_datatype, , int&gt; &lt;column1_nullability,, NOT NULL&gt;, 
+	&lt;column2_name, sysname, c2&gt; &lt;column2_datatype, , char(10)&gt; &lt;column2_nullability,, NULL&gt;, 
+	&lt;column3_name, sysname, c3&gt; &lt;column3_datatype, , datetime&gt; &lt;column3_nullability,, NULL&gt;, 
+	&lt;column4_name, sysname, c4&gt; varbinary(max) filestream &lt;column4_nullability,, NULL&gt;, 
+	&lt;column5_name, sysname, c5&gt; uniqueidentifier NOT NULL rowguidcol unique, 
+    CONSTRAINT &lt;contraint_name, sysname, PK_sample_table&gt; PRIMARY KEY (&lt;columns_in_primary_key, , c1&gt;)
+)
+GO</BlockTemplate>
+    <ParentID>49</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>72</ID>
+    <Description>timestamp </Description>
+    <BlockTemplate>DEFAULT @var timestamp SET @var=</BlockTemplate>
+    <ParentID>49</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>73</ID>
+    <Description>table </Description>
+    <BlockTemplate>DEFAULT @var table SET @var=</BlockTemplate>
+    <ParentID>49</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>74</ID>
+    <Description>sql_variant</Description>
+    <BlockTemplate>DEFAULT @var sql_variant SET @var=</BlockTemplate>
+    <ParentID>49</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>76</ID>
+    <Description>cursor </Description>
+    <BlockTemplate>DEFAULT @var cursor SET @var=</BlockTemplate>
+    <ParentID>49</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>77</ID>
+    <Description>hierarchyid </Description>
+    <BlockTemplate>DEFAULT @var hierarchyid SET @var=</BlockTemplate>
+    <ParentID>49</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>78</ID>
+    <Description>Functions That Get System Date and Time Values</Description>
+    <BlockTemplate>Functions That Get System Date and Time Values</BlockTemplate>
+    <ParentID>106</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>79</ID>
+    <Description>Lower-Precision System Date and Time Functions</Description>
+    <BlockTemplate>Lower-Precision System Date and Time Functions</BlockTemplate>
+    <ParentID>78</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>80</ID>
+    <Description>GETDATE ( )</Description>
+    <BlockTemplate>GETDATE ( )</BlockTemplate>
+    <ParentID>79</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>81</ID>
+    <Description>Functions That Get Date and Time Parts</Description>
+    <BlockTemplate>Functions That Get Date and Time Parts</BlockTemplate>
+    <ParentID>78</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>82</ID>
+    <Description>YEAR ( date )</Description>
+    <BlockTemplate>YEAR ( date )</BlockTemplate>
+    <ParentID>81</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>83</ID>
+    <Description>MONTH ( date )</Description>
+    <BlockTemplate>MONTH ( date )</BlockTemplate>
+    <ParentID>81</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>84</ID>
+    <Description>DAY ( date )</Description>
+    <BlockTemplate>DAY ( date )</BlockTemplate>
+    <ParentID>81</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>85</ID>
+    <Description>DATEPART ( datepart , date )</Description>
+    <BlockTemplate>DATEPART ( datepart , date )</BlockTemplate>
+    <ParentID>81</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>86</ID>
+    <Description>DATENAME ( datepart , date )</Description>
+    <BlockTemplate>DATENAME ( datepart , date )</BlockTemplate>
+    <ParentID>81</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>87</ID>
+    <Description>Functions That Get Date and Time Difference</Description>
+    <BlockTemplate>Functions That Get Date and Time Difference</BlockTemplate>
+    <ParentID>78</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>88</ID>
+    <Description>DATEDIFF ( datepart , startdate , enddate )</Description>
+    <BlockTemplate>DATEDIFF ( datepart , startdate , enddate )</BlockTemplate>
+    <ParentID>87</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>89</ID>
+    <Description>Functions That Modify Date and Time Values</Description>
+    <BlockTemplate>Functions That Modify Date and Time Values</BlockTemplate>
+    <ParentID>78</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>90</ID>
+    <Description>DATEADD (datepart , number , date )</Description>
+    <BlockTemplate>DATEADD (datepart , number , date )</BlockTemplate>
+    <ParentID>89</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>91</ID>
+    <Description>Functions That Set or Get Session Format</Description>
+    <BlockTemplate>Functions That Set or Get Session Format</BlockTemplate>
+    <ParentID>78</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>92</ID>
+    <Description>SET DATEFORMAT { format | @format_var }</Description>
+    <BlockTemplate>SET DATEFORMAT { format | @format_var }</BlockTemplate>
+    <ParentID>91</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>93</ID>
+    <Description>Functions That Validate Date and Time Values</Description>
+    <BlockTemplate>Functions That Validate Date and Time Values</BlockTemplate>
+    <ParentID>78</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>94</ID>
+    <Description>ISDATE ( expression )</Description>
+    <BlockTemplate>ISDATE ( expression )</BlockTemplate>
+    <ParentID>93</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>95</ID>
+    <Description>String Functions</Description>
+    <BlockTemplate>String Functions</BlockTemplate>
+    <ParentID>106</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>96</ID>
+    <Description>System Functions</Description>
+    <BlockTemplate>System Functions</BlockTemplate>
+    <ParentID>106</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>97</ID>
+    <Description>@@IDENTITY </Description>
+    <BlockTemplate>@@IDENTITY </BlockTemplate>
+    <ParentID>96</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>98</ID>
+    <Description>IDENTITY (Function) </Description>
+    <BlockTemplate>IDENTITY (Function) </BlockTemplate>
+    <ParentID>96</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>99</ID>
+    <Description>ISDATE </Description>
+    <BlockTemplate>ISDATE(@var)=1 --True
+ISDATE(@var)=0 --False</BlockTemplate>
+    <ParentID>96</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>100</ID>
+    <Description>ISNULL </Description>
+    <BlockTemplate>ISNULL </BlockTemplate>
+    <ParentID>96</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>101</ID>
+    <Description>ISNUMERIC </Description>
+    <BlockTemplate>ISNUMERIC(@var)
+ISNUMERIC('1')=1
+ISNUMERIC('q')=0</BlockTemplate>
+    <ParentID>96</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>103</ID>
+    <Description>NULLIF</Description>
+    <BlockTemplate>NULLIF
+For example, 
+Return NULL
+
+SELECT NULLIF(4,4) AS Same, 
+NULLIF(5,7) AS Different;
+
+SELECT AVG(NULLIF(COALESCE(current_year,  
+   previous_year), 0.00)) AS 'Average Budget'  
+FROM budgets;</BlockTemplate>
+    <ParentID>96</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>104</ID>
+    <Description>NEWID </Description>
+    <BlockTemplate>NEWID 
+
+DECLARE @myid uniqueidentifier  
+SET @myid = NEWID()  
+PRINT 'Value of @myid is: '+ CONVERT(varchar(255), @myid)  
+
+
+
+RESULT: 6F9619FF-8B86-D011-B42D-00C04FC964FF </BlockTemplate>
+    <ParentID>96</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>105</ID>
+    <Description>@@ROWCOUNT </Description>
+    <BlockTemplate>@@ROWCOUNT </BlockTemplate>
+    <ParentID>96</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>106</ID>
+    <Description>STANDARD FUNCTIONS</Description>
+    <BlockTemplate>STANDARD FUNCTIONS</BlockTemplate>
+    <ParentID>0</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>107</ID>
+    <Description>Metadata Functions</Description>
+    <BlockTemplate>Metadata Functions</BlockTemplate>
+    <ParentID>106</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>108</ID>
+    <Description>DB_NAME </Description>
+    <BlockTemplate>DB_NAME </BlockTemplate>
+    <ParentID>107</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>109</ID>
+    <Description>DB_ID </Description>
+    <BlockTemplate>DB_ID </BlockTemplate>
+    <ParentID>107</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>110</ID>
+    <Description>OBJECT_ID </Description>
+    <BlockTemplate>OBJECT_ID </BlockTemplate>
+    <ParentID>107</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>111</ID>
+    <Description>OBJECT_NAME </Description>
+    <BlockTemplate>OBJECT_NAME </BlockTemplate>
+    <ParentID>107</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>112</ID>
+    <Description>Configuration Functions</Description>
+    <BlockTemplate>Configuration Functions</BlockTemplate>
+    <ParentID>106</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>113</ID>
+    <Description>@@SERVERNAME </Description>
+    <BlockTemplate>@@SERVERNAME </BlockTemplate>
+    <ParentID>112</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>114</ID>
+    <Description>@@SPID </Description>
+    <BlockTemplate>@@SPID </BlockTemplate>
+    <ParentID>112</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>115</ID>
+    <Description>Cursor Functions</Description>
+    <BlockTemplate>Cursor Functions</BlockTemplate>
+    <ParentID>106</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>116</ID>
+    <Description>@@FETCH_STATUS </Description>
+    <BlockTemplate>@@FETCH_STATUS </BlockTemplate>
+    <ParentID>115</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>117</ID>
+    <Description>@@CURSOR_ROWS </Description>
+    <BlockTemplate>@@CURSOR_ROWS </BlockTemplate>
+    <ParentID>115</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>118</ID>
+    <Description>Text and Image Functions</Description>
+    <BlockTemplate>Text and Image Functions</BlockTemplate>
+    <ParentID>106</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>119</ID>
+    <Description>TEXTPTR </Description>
+    <BlockTemplate>TEXTPTR </BlockTemplate>
+    <ParentID>118</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>120</ID>
+    <Description>PATINDEX </Description>
+    <BlockTemplate>PATINDEX </BlockTemplate>
+    <ParentID>118</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>121</ID>
+    <Description>TEXTVALID </Description>
+    <BlockTemplate>TEXTVALID </BlockTemplate>
+    <ParentID>118</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>122</ID>
+    <Description>CREATE FUNCTION</Description>
+    <BlockTemplate>CREATE FUNCTION</BlockTemplate>
+    <ParentID>5</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>123</ID>
+    <Description>Scalar Functions</Description>
+    <BlockTemplate>CREATE FUNCTION [ schema_name. ] function_name 
+( [ { @parameter_name [ AS ][ type_schema_name. ] parameter_data_type [ = default ] [ READONLY ] } [ ,...n ] ] ) 
+RETURNS return_data_type
+[ AS ] 
+BEGIN 
+	function_body 
+	RETURN scalar_expression 
+END
+</BlockTemplate>
+    <ParentID>122</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>124</ID>
+    <Description>Inline Table-Valued Functions</Description>
+    <BlockTemplate>CREATE FUNCTION [ schema_name. ] function_name 
+( [ { @parameter_name [ AS ] [ type_schema_name. ] parameter_data_type [ = default ] [ READONLY ] } [ ,...n ] ] )
+RETURNS TABLE
+[ AS ] 
+RETURN [ ( ] select_stmt [ ) ] [ ; 
+
+</BlockTemplate>
+    <ParentID>122</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>125</ID>
+    <Description>Multistatement Table-valued Functions</Description>
+    <BlockTemplate>CREATE FUNCTION [ schema_name. ] function_name 
+( [ { @parameter_name [ AS ] [ type_schema_name. ] parameter_data_type [ = default ] [READONLY] } [ ,...n ] ] ) RETURNS @return_variable TABLE &lt;table_type_definition&gt; 
+[ AS ] 
+BEGIN 
+	function_body 
+	RETURN 
+END
+</BlockTemplate>
+    <ParentID>122</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>126</ID>
+    <Description>CLR Scalar Functions</Description>
+    <BlockTemplate>CREATE FUNCTION [ schema_name. ] function_name 
+( { @parameter_name [AS] [ type_schema_name. ] parameter_data_type [ = default ] } [ ,...n ] ) 
+RETURNS { return_data_type } 
+[ AS ] 
+EXTERNAL NAME &lt;method_specifier&gt;
+</BlockTemplate>
+    <ParentID>122</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>127</ID>
+    <Description>CLR Table-Valued Functions</Description>
+    <BlockTemplate>CREATE FUNCTION [ schema_name. ] function_name 
+( { @parameter_name [AS] [ type_schema_name. ] parameter_data_type [ = default ] } [ ,...n ] ) 
+RETURNS TABLE &lt;clr_table_type_definition&gt; 
+[ ORDER( &lt;order_clause&gt; )] 
+[ AS ] 
+EXTERNAL NAME &lt;method_specifier&gt;
+</BlockTemplate>
+    <ParentID>122</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>128</ID>
+    <Description>DROP VIEW #</Description>
+    <BlockTemplate>DROP VIEW #</BlockTemplate>
+    <ParentID>4</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>129</ID>
+    <Description>DROP PROCEDURE #</Description>
+    <BlockTemplate>DROP PROCEDURE #</BlockTemplate>
+    <ParentID>4</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>130</ID>
+    <Description>DROP FUNCTION #</Description>
+    <BlockTemplate>DROP FUNCTION #</BlockTemplate>
+    <ParentID>4</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>131</ID>
+    <Description>DELETE # FROM # JOIN #</Description>
+    <BlockTemplate>DELETE # 
+FROM # 
+JOIN # 
+WHERE</BlockTemplate>
+    <ParentID>9</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>132</ID>
+    <Description>VARIABLES</Description>
+    <BlockTemplate>CURSOR</BlockTemplate>
+    <ParentID>42</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>133</ID>
+    <Description>CURSOR</Description>
+    <BlockTemplate>DEFUNE #curs CURSOR FOR
+SELECT * FROM # JOIN # WHERE
+OPEN #curs
+FETCH #curs INTO
+WHILE @@FETCH_STATUS=0
+BEGIN
+	WHILE @@FETCH_STATUS=0
+END
+CLOSE #curs
+DEALLOCATE #curs</BlockTemplate>
+    <ParentID>42</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>134</ID>
+    <Description>ANALYSIS</Description>
+    <BlockTemplate>ANALYSIS</BlockTemplate>
+    <ParentID>1</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>135</ID>
+    <Description>SELECT *, COUNT(*) FROM #</Description>
+    <BlockTemplate>SELECT *, COUNT(*)
+FROM # (nolock)
+WHERE #
+GROUP BY
+HAVING COUNT(*)&gt;1
+ORDER BY</BlockTemplate>
+    <ParentID>134</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>136</ID>
+    <Description>SELECT *, COUNT(*) FROM # JOIN #</Description>
+    <BlockTemplate>SELECT *, COUNT(*)
+FROM # t1 (nolock)
+JOIN # t2 (nolock) ON t2. = t1.
+WHERE #
+GROUP BY
+HAVING COUNT(*)&gt;1
+ORDER BY</BlockTemplate>
+    <ParentID>135</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>137</ID>
+    <Description>SELECT *, COUNT(*), MAX(*) FROM #</Description>
+    <BlockTemplate>SELECT *, COUNT(*), MAX(*)
+FROM # (nolock)
+WHERE #
+GROUP BY
+HAVING COUNT(*)&gt;1
+ORDER BY</BlockTemplate>
+    <ParentID>134</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>138</ID>
+    <Description>SELECT *, COUNT(*), MAX(*) FROM # JOIN #</Description>
+    <BlockTemplate>SELECT *, COUNT(*), MAX(*)
+FROM # t1 (nolock)
+JOIN # t2 (nolock) ON t2. = t1.
+WHERE #
+GROUP BY
+HAVING COUNT(*)&gt;1
+ORDER BY</BlockTemplate>
+    <ParentID>137</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>139</ID>
+    <Description>SELECT TOP 100 * FROM # LEFT JOIN #</Description>
+    <BlockTemplate>SELECT TOP 100 * 
+FROM # 
+LEFT JOIN #
+WHERE
+ORDER BY</BlockTemplate>
+    <ParentID>1</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>140</ID>
+    <Description>SELECT TOP 100 * FROM # RIGHT JOIN #</Description>
+    <BlockTemplate>SELECT TOP 100 * 
+FROM # 
+RIGHT JOIN #
+WHERE
+ORDER BY</BlockTemplate>
+    <ParentID>1</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>141</ID>
+    <Description>SELECT TOP 100 * FROM # FULL JOIN #</Description>
+    <BlockTemplate>SELECT TOP 100 t1.*, t2.* 
+FROM (
+	SELECT * FROM # WHERE  
+) as t1
+FULL JOIN (
+	SELECT * FROM # WHERE  
+) as t2 
+ON t1. = t2.
+WHERE
+ORDER BY</BlockTemplate>
+    <ParentID>1</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>142</ID>
+    <Description>SELECT TOP 100 * FROM # CROSS JOIN #</Description>
+    <BlockTemplate>SELECT TOP 100 * 
+FROM # 
+CROSS JOIN #
+WHERE
+ORDER BY</BlockTemplate>
+    <ParentID>1</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>143</ID>
+    <Description>EXEC</Description>
+    <BlockTemplate>EXEC sp_help</BlockTemplate>
+    <ParentID>0</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>144</ID>
+    <Description>EXEC sp_help</Description>
+    <BlockTemplate>EXEC sp_help</BlockTemplate>
+    <ParentID>143</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>145</ID>
+    <Description>EXEC sp_helptext</Description>
+    <BlockTemplate>EXEC sp_helptext</BlockTemplate>
+    <ParentID>143</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>146</ID>
+    <Description>EXEC(@cmd)</Description>
+    <BlockTemplate>DECLARE @cmd varchar(8000)
+SET @cmd=''
+--PRINT @cmd
+EXEC(@cmd)</BlockTemplate>
+    <ParentID>143</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>147</ID>
+    <Description>SELECT CurrDate With Seconds</Description>
+    <BlockTemplate>SELECT CurrTime=CONVERT(varchar(10),GetDate(),101)+' '+CONVERT(varchar(8),GetDate(),108)</BlockTemplate>
+    <ParentID>1</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>148</ID>
+    <Description>COALLESCE</Description>
+    <BlockTemplate>COALLESCE
+Функция COALESCE принимает список значений и возвращает первое из них, которое не равно NULL:
+
+COALESCE(выражение_1, выражение_2, выражение_N)</BlockTemplate>
+    <ParentID>95</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>149</ID>
+    <Description />
+    <BlockTemplate>CREATE PROCEDURE</BlockTemplate>
+    <ParentID>5</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>false</Choosed>
+  </sqlBlockTemplates>
+  <sqlBlockTemplates>
+    <ID>150</ID>
+    <Description>CREATE PROCEDURE</Description>
+    <BlockTemplate>CREATE PROCEDURE
+	@IO int
+AS
+BEGIN
+
+END</BlockTemplate>
+    <ParentID>5</ParentID>
+    <SortOrder>0</SortOrder>
+    <Choosed>true</Choosed>
+  </sqlBlockTemplates>
+  <PartsOfTableNames>
+    <ID>2</ID>
+    <PartOfName>bot_</PartOfName>
+  </PartsOfTableNames>
+</sqlTemplatesDataSet>
