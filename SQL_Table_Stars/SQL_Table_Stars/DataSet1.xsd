@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Connections" msprop:Generator_TableClassName="ConnectionsDataTable" msprop:Generator_TableVarName="tableConnections" msprop:Generator_RowChangedName="ConnectionsRowChanged" msprop:Generator_TablePropName="Connections" msprop:Generator_RowDeletingName="ConnectionsRowDeleting" msprop:Generator_RowChangingName="ConnectionsRowChanging" msprop:Generator_RowEvHandlerName="ConnectionsRowChangeEventHandler" msprop:Generator_RowDeletedName="ConnectionsRowDeleted" msprop:Generator_RowClassName="ConnectionsRow" msprop:Generator_UserTableName="Connections" msprop:Generator_RowEvArgName="ConnectionsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="ServerTypeID" msprop:Generator_ColumnVarNameInTable="columnServerTypeID" msprop:Generator_ColumnPropNameInRow="ServerTypeID" msprop:Generator_ColumnPropNameInTable="ServerTypeIDColumn" msprop:Generator_UserColumnName="ServerTypeID" type="xs:short" />
+              <xs:element name="ConnectionString" msprop:Generator_ColumnVarNameInTable="columnConnectionString" msprop:Generator_ColumnPropNameInRow="ConnectionString" msprop:Generator_ColumnPropNameInTable="ConnectionStringColumn" msprop:Generator_UserColumnName="ConnectionString" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ServerTypes" msprop:Generator_TableClassName="ServerTypesDataTable" msprop:Generator_TableVarName="tableServerTypes" msprop:Generator_RowChangedName="ServerTypesRowChanged" msprop:Generator_TablePropName="ServerTypes" msprop:Generator_RowDeletingName="ServerTypesRowDeleting" msprop:Generator_RowChangingName="ServerTypesRowChanging" msprop:Generator_RowEvHandlerName="ServerTypesRowChangeEventHandler" msprop:Generator_RowDeletedName="ServerTypesRowDeleted" msprop:Generator_RowClassName="ServerTypesRow" msprop:Generator_UserTableName="ServerTypes" msprop:Generator_RowEvArgName="ServerTypesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:short" />
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Tables" msprop:Generator_TableClassName="TablesDataTable" msprop:Generator_TableVarName="tableTables" msprop:Generator_TablePropName="_Tables" msprop:Generator_RowDeletingName="TablesRowDeleting" msprop:Generator_RowChangingName="TablesRowChanging" msprop:Generator_RowEvHandlerName="TablesRowChangeEventHandler" msprop:Generator_RowDeletedName="TablesRowDeleted" msprop:Generator_UserTableName="Tables" msprop:Generator_RowChangedName="TablesRowChanged" msprop:Generator_RowEvArgName="TablesRowChangeEvent" msprop:Generator_RowClassName="TablesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:short" />
+              <xs:element name="Table" msprop:Generator_ColumnVarNameInTable="columnTable" msprop:Generator_ColumnPropNameInRow="_Table" msprop:Generator_ColumnPropNameInTable="TableColumn" msprop:Generator_UserColumnName="Table" type="xs:string" minOccurs="0" />
+              <xs:element name="Cross_Count" msprop:Generator_ColumnVarNameInTable="columnCross_Count" msprop:Generator_ColumnPropNameInRow="Cross_Count" msprop:Generator_ColumnPropNameInTable="Cross_CountColumn" msprop:Generator_UserColumnName="Cross_Count" type="xs:short" default="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Fields" msprop:Generator_TableClassName="FieldsDataTable" msprop:Generator_TableVarName="tableFields" msprop:Generator_TablePropName="Fields" msprop:Generator_RowDeletingName="FieldsRowDeleting" msprop:Generator_RowChangingName="FieldsRowChanging" msprop:Generator_RowEvHandlerName="FieldsRowChangeEventHandler" msprop:Generator_RowDeletedName="FieldsRowDeleted" msprop:Generator_UserTableName="Fields" msprop:Generator_RowChangedName="FieldsRowChanged" msprop:Generator_RowEvArgName="FieldsRowChangeEvent" msprop:Generator_RowClassName="FieldsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:short" />
+              <xs:element name="Table_ID" msprop:Generator_ColumnVarNameInTable="columnTable_ID" msprop:Generator_ColumnPropNameInRow="Table_ID" msprop:Generator_ColumnPropNameInTable="Table_IDColumn" msprop:Generator_UserColumnName="Table_ID" type="xs:short" minOccurs="0" />
+              <xs:element name="Field" msprop:Generator_ColumnVarNameInTable="columnField" msprop:Generator_ColumnPropNameInRow="Field" msprop:Generator_ColumnPropNameInTable="FieldColumn" msprop:Generator_UserColumnName="Field" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Table_Field_Path" msprop:Generator_TableClassName="Table_Field_PathDataTable" msprop:Generator_TableVarName="tableTable_Field_Path" msprop:Generator_TablePropName="Table_Field_Path" msprop:Generator_RowDeletingName="Table_Field_PathRowDeleting" msprop:Generator_RowChangingName="Table_Field_PathRowChanging" msprop:Generator_RowEvHandlerName="Table_Field_PathRowChangeEventHandler" msprop:Generator_RowDeletedName="Table_Field_PathRowDeleted" msprop:Generator_UserTableName="Table_Field_Path" msprop:Generator_RowChangedName="Table_Field_PathRowChanged" msprop:Generator_RowEvArgName="Table_Field_PathRowChangeEvent" msprop:Generator_RowClassName="Table_Field_PathRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:short" />
+              <xs:element name="Field_ID" msprop:Generator_ColumnVarNameInTable="columnField_ID" msprop:Generator_ColumnPropNameInRow="Field_ID" msprop:Generator_ColumnPropNameInTable="Field_IDColumn" msprop:Generator_UserColumnName="Field_ID" type="xs:short" minOccurs="0" />
+              <xs:element name="Table_ID" msprop:Generator_ColumnVarNameInTable="columnTable_ID" msprop:Generator_ColumnPropNameInRow="Table_ID" msprop:Generator_ColumnPropNameInTable="Table_IDColumn" msprop:Generator_UserColumnName="Table_ID" type="xs:short" />
+              <xs:element name="Path_ID" msprop:Generator_ColumnVarNameInTable="columnPath_ID" msprop:Generator_ColumnPropNameInRow="Path_ID" msprop:Generator_ColumnPropNameInTable="Path_IDColumn" msprop:Generator_UserColumnName="Path_ID" type="xs:short" />
+              <xs:element name="SubPath" msprop:Generator_ColumnVarNameInTable="columnSubPath" msprop:Generator_ColumnPropNameInRow="SubPath" msprop:Generator_ColumnPropNameInTable="SubPathColumn" msprop:Generator_UserColumnName="SubPath" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Paths" msprop:Generator_TableClassName="PathsDataTable" msprop:Generator_TableVarName="tablePaths" msprop:Generator_RowChangedName="PathsRowChanged" msprop:Generator_TablePropName="Paths" msprop:Generator_RowDeletingName="PathsRowDeleting" msprop:Generator_RowChangingName="PathsRowChanging" msprop:Generator_RowEvHandlerName="PathsRowChangeEventHandler" msprop:Generator_RowDeletedName="PathsRowDeleted" msprop:Generator_RowClassName="PathsRow" msprop:Generator_UserTableName="Paths" msprop:Generator_RowEvArgName="PathsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:short" />
+              <xs:element name="Path" msprop:Generator_ColumnVarNameInTable="columnPath" msprop:Generator_ColumnPropNameInRow="Path" msprop:Generator_ColumnPropNameInTable="PathColumn" msprop:Generator_UserColumnName="Path" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="ConnectionsKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Connections" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="ServerTypesKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ServerTypes" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="TablesKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Tables" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="FieldsKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Fields" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="PathsKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Table_Field_Path" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:unique name="Paths_PathsKey1" msdata:ConstraintName="PathsKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Paths" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+    <xs:keyref name="Fields_Paths" refer="FieldsKey1" msdata:ConstraintOnly="true" msdata:UpdateRule="None">
+      <xs:selector xpath=".//mstns:Table_Field_Path" />
+      <xs:field xpath="mstns:Field_ID" />
+    </xs:keyref>
+    <xs:keyref name="Tables_Paths" refer="TablesKey1" msdata:ConstraintOnly="true" msdata:UpdateRule="None">
+      <xs:selector xpath=".//mstns:Table_Field_Path" />
+      <xs:field xpath="mstns:Table_ID" />
+    </xs:keyref>
+    <xs:keyref name="Paths_Table_Field_Path" refer="Paths_PathsKey1" msdata:ConstraintOnly="true" msdata:UpdateRule="None">
+      <xs:selector xpath=".//mstns:Table_Field_Path" />
+      <xs:field xpath="mstns:Path_ID" />
+    </xs:keyref>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="ServerTypes_Connections" msdata:parent="ServerTypes" msdata:child="Connections" msdata:parentkey="ID" msdata:childkey="ServerTypeID" msprop:Generator_UserChildTable="Connections" msprop:Generator_ChildPropName="GetConnectionsRows" msprop:Generator_UserRelationName="ServerTypes_Connections" msprop:Generator_ParentPropName="ServerTypesRow" msprop:Generator_RelationVarName="relationServerTypes_Connections" msprop:Generator_UserParentTable="ServerTypes" />
+      <msdata:Relationship name="Tables_Fields" msdata:parent="Tables" msdata:child="Fields" msdata:parentkey="ID" msdata:childkey="Table_ID" msprop:Generator_UserChildTable="Fields" msprop:Generator_ChildPropName="GetFieldsRows" msprop:Generator_UserRelationName="Tables_Fields" msprop:Generator_ParentPropName="TablesRow" msprop:Generator_RelationVarName="relationTables_Fields" msprop:Generator_UserParentTable="Tables" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>
