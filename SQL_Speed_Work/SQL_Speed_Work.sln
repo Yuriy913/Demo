@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29326.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQL_Speed_Work", "SQL_Speed_Work\SQL_Speed_Work.csproj", "{10C3019F-75BA-4156-95CB-3D0A07AAB8FA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{10C3019F-75BA-4156-95CB-3D0A07AAB8FA}.Debug|x86.ActiveCfg = Release|x86
+		{10C3019F-75BA-4156-95CB-3D0A07AAB8FA}.Debug|x86.Build.0 = Release|x86
+		{10C3019F-75BA-4156-95CB-3D0A07AAB8FA}.Release|x86.ActiveCfg = Release|x86
+		{10C3019F-75BA-4156-95CB-3D0A07AAB8FA}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {869F1C24-AD99-4DB0-B3DE-291C6B09F050}
+	EndGlobalSection
+EndGlobal
