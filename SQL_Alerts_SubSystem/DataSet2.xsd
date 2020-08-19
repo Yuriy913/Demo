@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet2" targetNamespace="http://tempuri.org/DataSet2.xsd" xmlns:mstns="http://tempuri.org/DataSet2.xsd" xmlns="http://tempuri.org/DataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet2" msprop:Generator_UserDSName="DataSet2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="FtpFilesInfo" msprop:Generator_TableClassName="FtpFilesInfoDataTable" msprop:Generator_TableVarName="tableFtpFilesInfo" msprop:Generator_TablePropName="FtpFilesInfo" msprop:Generator_RowDeletingName="FtpFilesInfoRowDeleting" msprop:Generator_RowChangingName="FtpFilesInfoRowChanging" msprop:Generator_RowEvHandlerName="FtpFilesInfoRowChangeEventHandler" msprop:Generator_RowDeletedName="FtpFilesInfoRowDeleted" msprop:Generator_UserTableName="FtpFilesInfo" msprop:Generator_RowChangedName="FtpFilesInfoRowChanged" msprop:Generator_RowEvArgName="FtpFilesInfoRowChangeEvent" msprop:Generator_RowClassName="FtpFilesInfoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="FIleName" msprop:Generator_ColumnVarNameInTable="columnFIleName" msprop:Generator_ColumnPropNameInRow="FIleName" msprop:Generator_ColumnPropNameInTable="FIleNameColumn" msprop:Generator_UserColumnName="FIleName" type="xs:string" minOccurs="0" />
+              <xs:element name="FileTime" msprop:Generator_ColumnVarNameInTable="columnFileTime" msprop:Generator_ColumnPropNameInRow="FileTime" msprop:Generator_ColumnPropNameInTable="FileTimeColumn" msprop:Generator_UserColumnName="FileTime" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="FtpFilesKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:FtpFilesInfo" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
