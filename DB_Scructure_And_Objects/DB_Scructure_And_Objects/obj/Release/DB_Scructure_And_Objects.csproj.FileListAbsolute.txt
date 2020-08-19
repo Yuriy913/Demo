@@ -1,9 +1,0 @@
-C:\Solutions\C#\DB_Scructure_And_Objects\DB_Scructure_And_Objects\bin\Release\DB_Scructure_And_Objects.exe.config
-C:\Solutions\C#\DB_Scructure_And_Objects\DB_Scructure_And_Objects\bin\Release\DB_Scructure_And_Objects.exe
-C:\Solutions\C#\DB_Scructure_And_Objects\DB_Scructure_And_Objects\bin\Release\DB_Scructure_And_Objects.pdb
-C:\Solutions\C#\DB_Scructure_And_Objects\DB_Scructure_And_Objects\obj\Release\DB_Scructure_And_Objects.Form1.resources
-C:\Solutions\C#\DB_Scructure_And_Objects\DB_Scructure_And_Objects\obj\Release\DB_Scructure_And_Objects.Properties.Resources.resources
-C:\Solutions\C#\DB_Scructure_And_Objects\DB_Scructure_And_Objects\obj\Release\DB_Scructure_And_Objects.csproj.GenerateResource.cache
-C:\Solutions\C#\DB_Scructure_And_Objects\DB_Scructure_And_Objects\obj\Release\DB_Scructure_And_Objects.exe
-C:\Solutions\C#\DB_Scructure_And_Objects\DB_Scructure_And_Objects\obj\Release\DB_Scructure_And_Objects.pdb
-C:\Solutions\C#\DB_Scructure_And_Objects\DB_Scructure_And_Objects\obj\Release\DB_Scructure_And_Objects.csprojAssemblyReference.cache
